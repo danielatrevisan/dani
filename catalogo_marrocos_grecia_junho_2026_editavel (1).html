@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo — Marrocos & Grécia • Junho 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#1b1b1f;           /* texto principal */
+      --sand:#f3eee7;          /* fundo claro */
+      --sea:#003049;           /* azul profundo (egeu) */
+      --majorelle:#2e4da7;     /* azul majorelle */
+      --terracotta:#c06e52;    /* terracota marroquina */
+      --accent:#ffd166;        /* dourado suave */
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--sand);color:var(--ink);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;}
+    a{color:var(--majorelle);text-decoration:none}
+    .container{max-width:1000px;margin:0 auto;padding:24px}
+    header.hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;justify-content:center;background:linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.55)), url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;color:var(--white)}
+    header .overlay{position:absolute;inset:0;}
+    header .hero-inner{position:relative;padding:48px 24px;text-align:center;}
+    .eyebrow{letter-spacing:.18em;text-transform:uppercase;font-weight:600;opacity:.9}
+    .title{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,64px);line-height:1.05;margin:.25em 0}
+    .subtitle{opacity:.95;font-weight:300;font-size:clamp(16px,2.4vw,20px)}
+
+    /* NAV */
+    nav.sticky{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid #e6e2da}
+    nav .nav-inner{display:flex;gap:16px;overflow:auto;white-space:nowrap;padding:10px 24px}
+    nav a{padding:8px 12px;border-radius:999px;border:1px solid #e6e2da;color:var(--sea);font-weight:600}
+    nav a:hover{background:var(--sand)}
+
+    /* SECTION */
+    section{padding:56px 24px}
+    .section-title{font-family:"Playfair Display",serif;font-size:clamp(28px,3.6vw,44px);margin:0 0 8px;color:var(--sea)}
+    .kicker{color:#5f6c7b;font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+    .lede{font-size:18px;max-width:76ch}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;align-items:start}
+    .card{background:var(--white);border:1px solid #ece7df;border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,.06);overflow:hidden}
+    .card .body{padding:20px}
+    .tag{display:inline-block;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700}
+    .tag.mar{background:rgba(192,110,82,.12);color:var(--terracotta);border:1px solid rgba(192,110,82,.35)}
+    .tag.gre{background:rgba(46,77,167,.12);color:var(--majorelle);border:1px solid rgba(46,77,167,.35)}
+    .list{margin:0;padding-left:18px}
+    .list li{margin:.35em 0}
+
+    figure{margin:0}
+    figure img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+    figcaption{padding:10px 14px;background:var(--sand);color:#4a5568;font-size:12px}
+
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:var(--white);border:1px solid #ece7df;border-radius:999px}
+    .icon{width:20px;height:20px;border-radius:6px;background:var(--accent)}
+
+    /* TIMELINE */
+    .timeline{position:relative;padding-left:64px}
+    .timeline:before{content:"";position:absolute;left:40px;top:8px;bottom:8px;width:3px;background:linear-gradient(var(--terracotta),var(--majorelle))}
+    .dot{position:absolute;left:34px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--white);box-shadow:0 0 0 2px var(--terracotta)}
+    .tl-item{position:relative;margin:24px 0}
+    .tl-item .title-sm{margin:0;font-weight:700;color:var(--terracotta)}
+    .muted{color:#5f6c7b}
+
+    /* Rótulos de país na timeline */
+    .country-tag{position:absolute;left:0;transform:translateX(-8px);background:var(--sand);padding:4px 10px;border:1px solid #e6e2da;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.02em}
+    .country-tag.mar{color:var(--terracotta);border-color:rgba(192,110,82,.35)}
+    .country-tag.gre{color:var(--majorelle);border-color:rgba(46,77,167,.35)}
+
+    /* Para ocultar bolinhas: adicione class no container: <div class=\"timeline no-dots\"> */
+    .no-dots .dot{display:none}
+
+    /* DIVISÓRIAS ENTRE CIDADES */
+    hr.divider{
+      border:none;
+      border-top:1px solid #e6e2da;
+      margin:40px 0;
+      opacity:.9;
+    }
+    hr.divider.mar{ border-top:1px solid rgba(192,110,82,0.45); }   /* marrocos */
+    hr.divider.gre{ border-top:1px solid rgba(46,77,167,0.45); }     /* grécia */
+
+    /* OVERRIDES TIMELINE (vertical country labels, separators, no dots) */
+    .timeline{ position:relative; padding-left:72px; }
+    .timeline:before{ left:46px; }
+    .timeline .dot{ display:none; }
+
+    .tl-item{ position:relative; margin:22px 0; padding-top:14px; }
+    .tl-item:not(:first-child){ border-top:1px solid #e6e2da; }
+
+    .country-vert{
+      position:absolute; left:0; top:0;
+      display:flex; align-items:center; justify-content:center;
+      width:24px; color:#ffffff; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      writing-mode:vertical-rl; text-orientation:upright;
+      border-radius:10px;
+      user-select:none;
+    }
+    .country-vert.mar{ background: linear-gradient(180deg, rgba(192,110,82,.9), rgba(192,110,82,.75)); }
+    .country-vert.gre{ background: linear-gradient(180deg, rgba(46,77,167,.9), rgba(46,77,167,.75)); }
+
+    /* FOOTER */
+    footer{padding:32px 24px;border-top:1px solid #e6e2da;background:var(--white)}
+
+    /* PRINT */
+    @media print{
+      nav.sticky{display:none}
+      header.hero{min-height:auto}
+      .container{max-width:100%;padding:0 16px}
+      section{padding:28px 0}
+      .card{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- CAPA -->
+  <header class="hero" id="capa">
+    <div class="hero-inner container">
+      <div class="eyebrow">grupo dani • junho 2026 • 13 dias / 12 noites</div>
+      <h1 class="title">marrocos & grécia – catálogo da viagem</h1>
+      <p class="subtitle">roteiro premium com curiosidades históricas, destaques culturais e dicas úteis</p>
+      <div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <span class="pill"><span class="icon" aria-hidden="true"></span><strong>privado</strong> com guia em português</span>
+        <span class="pill"><span class="icon" aria-hidden="true"></span>hotéis 4★/5★</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV ANCORADA -->
+  <nav class="sticky" aria-label="Navegação de seções">
+    <div class="nav-inner container">
+      <a href="#timeline">linha do tempo</a>
+      <a href="#casablanca">casablanca</a>
+      <a href="#chefchaouen">chefchaouen</a>
+      <a href="#fes">fes</a>
+      <a href="#rabat">rabat</a>
+      <a href="#marrakech">marrakech</a>
+      <a href="#atenas">atenas</a>
+      <a href="#sounion">cabo sounion</a>
+      <a href="#mykonos">mykonos</a>
+      <a href="#delos">delos & rhenia</a>
+      <a href="#santorini">santorini</a>
+      <a href="#dicas">dicas & observações</a>
+      <a href="#contatos">contatos</a>
+    </div>
+  </nav>
+
+  <!-- LINHA DO TEMPO -->
+  <section id="timeline" class="container">
+    <p class="kicker">visão geral</p>
+    <h2 class="section-title">linha do tempo do roteiro</h2>
+    <p class="lede">Uma visão concisa das experiências previstas — do Atlântico marroquino ao azul cicládico.</p>
+
+    <div class="card" style="margin-top:18px">
+      <div class="body">
+        <div class="timeline no-dots">
+          <!-- Barras verticais com nome dos países (ajuste top/height conforme necessário) -->
+          <div class="country-vert mar" style="top:0;height:296px;">marrocos</div>
+          <div class="country-vert gre" style="top:296px;height:460px;">grécia</div>
+          <div class="tl-item"><span class="dot" style="top:6px"></span>
+            <h4 class="title-sm">Dia 7 jun • <span class="tag mar">marrocos</span> casablanca</h4>
+            <div class="muted">chegada, mesquita hassan ii, anfa e corniche ain diab</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:64px"></span>
+            <h4 class="title-sm">Dia 8 jun • <span class="tag mar">marrocos</span> casablanca → chefchaouen</h4>
+            <div class="muted">cidade azul nas montanhas rif</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:122px"></span>
+            <h4 class="title-sm">Dia 9 jun • <span class="tag mar">marrocos</span> chefchaouen → fes</h4>
+            <div class="muted">medina medieval e artesanato; tempo livre</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:180px"></span>
+            <h4 class="title-sm">Dia 10 jun • <span class="tag mar">marrocos</span> fes → rabat → marrakech</h4>
+            <div class="muted">torre hassan, kasbah dos oudayas, mausoléu mohamed v</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:238px"></span>
+            <h4 class="title-sm">Dia 11 jun • <span class="tag mar">marrocos</span> marrakech</h4>
+            <div class="muted">koutoubia (ext.), tumbas saaditas, palácio bahia, jardim majorelle, jemaa el‑fna</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:296px"></span>
+            <h4 class="title-sm">Dia 12 jun • voo para <span class="tag gre">grécia</span> atenas</h4>
+            <div class="muted">chegada e tarde livre</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:354px"></span>
+            <h4 class="title-sm">Dia 13 jun • <span class="tag gre">grécia</span> atenas & cabo sounion</h4>
+            <div class="muted">acrópole, panorâmica, templo de poseidon ao entardecer</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:412px"></span>
+            <h4 class="title-sm">Dia 14 jun • <span class="tag gre">grécia</span> ferry piraeus → mykonos</h4>
+            <div class="muted">walking tour em chora</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:470px"></span>
+            <h4 class="title-sm">Dia 15 jun • <span class="tag gre">grécia</span> mykonos</h4>
+            <div class="muted">day use em beach club (nammos)</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:528px"></span>
+            <h4 class="title-sm">Dia 16 jun • <span class="tag gre">grécia</span> cruzeiro delos & rhenia</h4>
+            <div class="muted">barco com almoço e bebidas</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:586px"></span>
+            <h4 class="title-sm">Dia 17 jun • <span class="tag gre">grécia</span> mykonos → santorini</h4>
+            <div class="muted">tour em oia ao pôr do sol + degustação</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:644px"></span>
+            <h4 class="title-sm">Dia 18 jun • <span class="tag gre">grécia</span> santorini</h4>
+            <div class="muted">red cruise na caldeira: praias branca, preta e vermelha</div>
+          </div>
+          <div class="tl-item"><span class="dot" style="top:702px"></span>
+            <h4 class="title-sm">Dia 19 jun • retorno</h4>
+            <div class="muted">traslado ao aeroporto</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÕES POR DESTINO (texto curto + curiosidades) -->
+  
+  <section id="casablanca" class="container">
+    <div class="grid" style="grid-template-columns:repeat(12,1fr)">
+      <div class="card" style="grid-column:span 7">
+        <figure>
+          <img alt="Mesquita Hassan II em Casablanca" src="https://images.unsplash.com/photo-1555421689-3f034debb7d5?q=80&w=1600&auto=format&fit=crop" />
+          <figcaption>mesquita hassan ii e o atlântico</figcaption>
+        </figure>
+      </div>
+      <div style="grid-column:span 5">
+        <p class="kicker">marrocos</p>
+        <h2 class="section-title">casablanca</h2>
+        <p class="lede">Porta de entrada moderna com alma atlântica — da Mesquita Hassan II à elegante Anfa e à Corniche de Ain Diab.</p>
+        <div class="card" style="margin-top:14px">
+          <div class="body">
+            <strong>curiosidades</strong>
+            <ul class="list">
+              <li>O minarete da Hassan II atinge ~210 m e é referência arquitetônica contemporânea.</li>
+              <li>Anfa floresceu como bairro residencial no séc. XX, berço de cafés e clubes icônicos.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="margin-top:14px">
+          <div class="body">
+            <strong>destaques</strong>
+            <ul class="list"><li>Visita à Hassan II • Passeio por Anfa • Pôr do sol na Corniche Ain Diab</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="chefchaouen" class="container">
+    <div class="grid">
+      <div style="grid-column:span 5">
+        <p class="kicker">marrocos</p>
+        <h2 class="section-title">chefchaouen (a cidade azul)</h2>
+        <p class="lede">Entre montanhas do Rif, ruelas azuis e portas fotogênicas definem o clima de contemplação e artesanato.</p>
+        <div class="card" style="margin-top:14px"><div class="body">
+          <strong>curiosidades</strong>
+          <ul class="list">
+            <li>A tradição do azul ganhou força no séc. XX e popularizou-se entre moradores e artesãos.</li>
+            <li>O ritmo é de vila: perfeito para caminhar, provar queijos e observar a luz nos becos.</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card" style="grid-column:span 7">
+        <figure>
+          <img alt="Ruelas azuis de Chefchaouen" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" />
+          <figcaption>ruelas azuis e portas coloridas</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="fes" class="container">
+    <div class="grid">
+      <div class="card" style="grid-column:span 7">
+        <figure>
+          <img alt="Vista aérea da medina de Fes" src="https://images.unsplash.com/photo-1598021204024-95b9ea76735c?q=80&w=1600&auto=format&fit=crop" />
+          <figcaption>medina de fes — património mundial</figcaption>
+        </figure>
+      </div>
+      <div style="grid-column:span 5">
+        <p class="kicker">marrocos</p>
+        <h2 class="section-title">fes (medina medieval)</h2>
+        <p class="lede">Antiga capital e coração artesanal — madrasas, souks e o labirinto de vielas preservam séculos de história.</p>
+        <div class="card" style="margin-top:14px"><div class="body">
+          <strong>curiosidades</strong>
+          <ul class="list">
+            <li>A medina foi fundada no séc. IX; costuma-se dizer que Al‑Qarawiyyin é uma das universidades mais antigas em funcionamento.</li>
+            <li>Entre os marcos: Bou Inania, Attarine, Nejjarine e o bairro judaico Mellah.</li>
+          </ul>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rabat" class="container">
+    <div class="grid">
+      <div style="grid-column:span 5">
+        <p class="kicker">marrocos</p>
+        <h2 class="section-title">rabat (capital)</h2>
+        <p class="lede">Equilíbrio entre o cívico e o histórico: a Torre Hassan, o Mausoléu de Mohammed V e a Kasbah dos Oudayas.</p>
+        <div class="card" style="margin-top:14px"><div class="body">
+          <strong>curiosidades</strong>
+          <ul class="list">
+            <li>O conjunto da mesquita Hassan (séc. XII) permaneceu inacabado, deixando a torre como ícone.</li>
+            <li>A Kasbah oferece mirantes sobre o Bou Regreg e o Atlântico.</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card" style="grid-column:span 7">
+        <figure>
+          <img alt="Torre Hassan em Rabat" src="https://images.unsplash.com/photo-1542979910-0e3c71ab1a9a?q=80&w=1600&auto=format&fit=crop" />
+          <figcaption>torre hassan e esplanada</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="marrakech" class="container">
+    <div class="grid">
+      <div class="card" style="grid-column:span 7">
+        <figure>
+          <img alt="Jardim Majorelle em Marrakech" src="https://images.unsplash.com/photo-1565538420870-da0c0d6d95c5?q=80&w=1600&auto=format&fit=crop" />
+          <figcaption>jardim majorelle — azuis intensos e cactos</figcaption>
+        </figure>
+      </div>
+      <div style="grid-column:span 5">
+        <p class="kicker">marrocos</p>
+        <h2 class="section-title">marrakech (pérola do sul)</h2>
+        <p class="lede">Mosaico de cores, aromas e arte — Koutoubia, Tumbas Saaditas, Palácio Bahia, Jardim Majorelle e a praça Jemaa el‑Fna.</p>
+        <div class="card" style="margin-top:14px"><div class="body">
+          <strong>curiosidades</strong>
+          <ul class="list">
+            <li>O Jardim Majorelle foi restaurado por Yves Saint Laurent e Pierre Bergé a partir de 1980.</li>
+            <li>A Jemaa el‑Fna é patrimônio imaterial pela sua tradição oral e performática.</li>
+          </ul>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="atenas" class="container">
+    <div class="grid">
+      <div style="grid-column:span 5">
+        <p class="kicker">grécia</p>
+        <h2 class="section-title">atenas clássica</h2>
+        <p class="lede">Acrópole, Partenon e o Erechtheion com as Cariátides; o Estádio Panathinaikó (o “Kalimármaro”) resgata os Jogos Olímpicos modernos.</p>
+        <div class="card" style="margin-top:14px"><div class="body">
+          <strong>curiosidades</strong>
+          <ul class="list">
+            <li>O Panathinaikon é inteiramente em mármore, reconstruído no séc. XIX.</li>
+            <li>A tríade Biblioteca–Academia–Universidade marca a Atenas neoclássica.</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card" style="grid-column:span 7">
+        <figure>
+          <img alt="Partenon na Acrópole de Atenas" src="https://images.unsplash.com/photo-1632377083755-cb7b7747f8ab?q=80&w=1600&auto=format&fit=crop" />
+          <figcaption>partenon — símbolo clássico</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="sounion" class="container">
+    <div class="grid">
+      <div class="card" style="grid-column:span 7">
+        <figure>
+          <img alt="Templo de Poseidon em Cabo Sounion" src="https://images.unsplash.com/photo-1569330416272-82145e3b1a29?q=80&w=1600&auto=format&fit=crop" />
+          <figcaption>templo de poseidon — penhasco sobre o egeu</figcaption>
+        </figure>
+      </div>
+      <div style="grid-column:span 5">
+        <p class="kicker">grécia</p>
+        <h2 class="section-title">cabo sounion</h2>
+        <p class="lede">Rota litorânea por Glyfada, Vouliagmeni e Varkiza culmina no templo de Poseidon, cenário cênico para o entardecer.</p>
+        <div class="card" style="margin-top:14px"><div class="body">
+          <strong>curiosidades</strong>
+          <ul class="list">
+            <li>Vista ampla do golfo Sarônico; em dias claros, é possível avistar diversas ilhas.</li>
+            <li>O templo atual data do séc. V a.C., em estilo dórico.</li>
+          </ul>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mykonos" class="container">
+    <div class="grid">
+      <div style="grid-column:span 5">
+        <p class="kicker">grécia</p>
+        <h2 class="section-title">mykonos</h2>
+        <p class="lede">Casinhas brancas, ruelas de Chora e os icônicos moinhos do séc. XVI; beach clubs completam o cenário mediterrâneo.</p>
+        <div class="card" style="margin-top:14px"><div class="body">
+          <strong>curiosidades</strong>
+          <ul class="list">
+            <li>Os moinhos aproveitavam ventos constantes para moer grãos.</li>
+            <li>Arquitetura cicládica prioriza fachadas brancas para refletir a luz e o calor.</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card" style="grid-column:span 7">
+        <figure>
+          <img alt="Ruelas brancas de Mykonos" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1600&auto=format&fit=crop" />
+          <figcaption>chora — estética cicládica</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="delos" class="container">
+    <div class="grid">
+      <div class="card" style="grid-column:span 7">
+        <figure>
+          <img alt="Sítio arqueológico de Delos" src="https://images.unsplash.com/photo-1508704019882-f9cf40e4759f?q=80&w=1600&auto=format&fit=crop" />
+          <figcaption>delos — ruínas helenísticas e mitologia</figcaption>
+        </figure>
+      </div>
+      <div style="grid-column:span 5">
+        <p class="kicker">grécia</p>
+        <h2 class="section-title">delos & rhenia (cruzeiro)</h2>
+        <p class="lede">Passeio de barco entre história e mar: Delos, berço mítico de Apolo e Ártemis, foi também um importante entreposto comercial.</p>
+        <div class="card" style="margin-top:14px"><div class="body">
+          <strong>curiosidades</strong>
+          <ul class="list">
+            <li>O sítio preserva casas com mosaicos, colunatas e ágoras helenísticas.</li>
+            <li>Paradas para banho nas águas translúcidas completam a experiência.</li>
+          </ul>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="santorini" class="container">
+    <div class="grid">
+      <div style="grid-column:span 5">
+        <p class="kicker">grécia</p>
+        <h2 class="section-title">santorini (oia & caldeira)</h2>
+        <p class="lede">Cúpulas azuis, vinhos de terroir vulcânico (Assyrtiko) e navegação pela cratera com praias branca, preta e vermelha.</p>
+        <div class="card" style="margin-top:14px"><div class="body">
+          <strong>curiosidades</strong>
+          <ul class="list">
+            <li>A paisagem é marcada pela grande erupção minoica, que moldou falésias e solo basáltico.</li>
+            <li>As águas termais próximas ao vulcão apresentam coloração ferruginosa.</li>
+          </ul>
+        </div></div>
+      </div>
+      <div class="card" style="grid-column:span 7">
+        <figure>
+          <img alt="Pôr do sol em Oia, Santorini" src="https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1600&auto=format&fit=crop" />
+          <figcaption>oia — pôr do sol sobre a caldeira</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- DICAS & OBSERVAÇÕES -->
+  <section id="dicas" class="container">
+    <p class="kicker">útil</p>
+    <h2 class="section-title">dicas rápidas & observações</h2>
+    <div class="grid">
+      <div class="card" style="grid-column:span 6"><div class="body">
+        <strong>logística</strong>
+        <ul class="list">
+          <li>Check-in padrão às 14h; check‑out às 12h. <!-- Edite se necessário --></li>
+          <li>Traslados, ferries e passeios conforme roteiro.</li>
+          <li>Hidratação e proteção solar essenciais em passeios externos.</li>
+        </ul>
+      </div></div>
+      <div class="card" style="grid-column:span 6"><div class="body">
+        <strong>etiqueta & entradas</strong>
+        <ul class="list">
+          <li>Mesquitas/templos: ombros e joelhos cobertos quando aplicável.</li>
+          <li>Gorjetas: previstas no Marrocos; na Grécia, conforme serviço.</li>
+          <li>Ingressos de monumentos indicados nas visitas guiadas.</li>
+        </ul>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- CONTATOS -->
+  <footer id="contatos">
+    <div class="container">
+      <div class="grid">
+        <div style="grid-column:span 7">
+          <h2 class="section-title" style="margin-top:0">contatos & personalização</h2>
+          <p>Insira aqui logomarca, telefones e QR code para o grupo. <!-- Substitua por seus dados --></p>
+        </div>
+        <div class="card" style="grid-column:span 5">
+          <div class="body">
+            <strong>hospedagens previstas</strong>
+            <ul class="list">
+              <li>Casablanca — Sofitel Tour Blanche</li>
+              <li>Chefchaouen — Taj Chefchaouen</li>
+              <li>Fes — Palais Medina & Spa</li>
+              <li>Marrakech — Mövenpick Marrakech</li>
+              <li>Atenas — Royal Olympic</li>
+              <li>Mykonos — Porto Mykonos (4★ sup)</li>
+              <li>Santorini — Orama Hotel</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:16px">© 2026 Grupo Dani — Este catálogo é editável. Substitua textos e imagens conforme desejar.</p>
+    </div>
+  </footer>
+</body>
+</html>
