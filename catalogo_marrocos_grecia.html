@@ -78,8 +78,8 @@
       margin:40px 0;
       opacity:.9;
     }
-    hr.divider.mar{ border-top:1px solid rgba(192,110,82,0.45); }   /* marrocos */
-    hr.divider.gre{ border-top:1px solid rgba(46,77,167,0.45); }     /* grécia */
+    hr.divider.mar{ border-top:1px solid rgba(192,110,82,0.45); }   /* Marrocos */
+    hr.divider.gre{ border-top:1px solid rgba(46,77,167,0.45); }     /* Grécia */
 
     /* OVERRIDES TIMELINE (vertical country labels, separators, no dots) */
     .timeline{ position:relative; padding-left:72px; }
@@ -87,7 +87,8 @@
     .timeline .dot{ display:none; }
 
     .tl-item{ position:relative; margin:22px 0; padding-top:14px; }
-    .tl-item:not(:first-child){ border-top:1px solid #e6e2da; }
+  /* Keep default border between timeline days so both timeline separators and section dividers are shown. */
+  .tl-item:not(:first-child){ border-top:1px solid #e6e2da; }
 
     .country-vert{
       position:absolute; left:0; top:0;
@@ -117,93 +118,72 @@
   <!-- CAPA -->
   <header class="hero" id="capa">
     <div class="hero-inner container">
-      <div class="eyebrow">grupo dani • junho 2026 • 13 dias / 12 noites</div>
-      <h1 class="title">marrocos & grécia – catálogo da viagem</h1>
-      <p class="subtitle">roteiro premium com curiosidades históricas, destaques culturais e dicas úteis</p>
-      <div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-        <span class="pill"><span class="icon" aria-hidden="true"></span><strong>privado</strong> com guia em português</span>
-        <span class="pill"><span class="icon" aria-hidden="true"></span>hotéis 4★/5★</span>
-      </div>
+      <div class="eyebrow">Exploradores do Mundo • junho 2026 • 13 dias / 12 noites</div>
+      <h1 class="title">Marrocos & Grécia</h1>
+      <p class="subtitle">Roteiro PREMIUM</p>
     </div>
   </header>
 
-  <!-- NAV ANCORADA -->
-  <nav class="sticky" aria-label="Navegação de seções">
-    <div class="nav-inner container">
-      <a href="#timeline">linha do tempo</a>
-      <a href="#casablanca">casablanca</a>
-      <a href="#chefchaouen">chefchaouen</a>
-      <a href="#fes">fes</a>
-      <a href="#rabat">rabat</a>
-      <a href="#marrakech">marrakech</a>
-      <a href="#atenas">atenas</a>
-      <a href="#sounion">cabo sounion</a>
-      <a href="#mykonos">mykonos</a>
-      <a href="#delos">delos & rhenia</a>
-      <a href="#santorini">santorini</a>
-      <a href="#dicas">dicas & observações</a>
-      <a href="#contatos">contatos</a>
-    </div>
-  </nav>
+  
 
   <!-- LINHA DO TEMPO -->
   <section id="timeline" class="container">
     <p class="kicker">visão geral</p>
-    <h2 class="section-title">linha do tempo do roteiro</h2>
-    <p class="lede">Uma visão concisa das experiências previstas — do Atlântico marroquino ao azul cicládico.</p>
+    <h2 class="section-title">Roteiro</h2>
+    <p class="lede">Do atlântico marroquino ao azul do mediterrâneo</p>
 
     <div class="card" style="margin-top:18px">
       <div class="body">
         <div class="timeline no-dots">
           <!-- Barras verticais com nome dos países (ajuste top/height conforme necessário) -->
-          <div class="country-vert mar" style="top:0;height:296px;">marrocos</div>
-          <div class="country-vert gre" style="top:296px;height:460px;">grécia</div>
+          <div class="country-vert mar" style="top:0;height:445px;">Marrocos</div>
+          <div class="country-vert gre" style="top:445px;height:670px;">Grécia</div>
           <div class="tl-item"><span class="dot" style="top:6px"></span>
-            <h4 class="title-sm">Dia 7 jun • <span class="tag mar">marrocos</span> casablanca</h4>
+            <h4 class="title-sm">Dia 7 jun • <span class="tag mar">Marrocos</span> casablanca</h4>
             <div class="muted">chegada, mesquita hassan ii, anfa e corniche ain diab</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:64px"></span>
-            <h4 class="title-sm">Dia 8 jun • <span class="tag mar">marrocos</span> casablanca → chefchaouen</h4>
+            <h4 class="title-sm">Dia 8 jun • <span class="tag mar">Marrocos</span> casablanca → chefchaouen</h4>
             <div class="muted">cidade azul nas montanhas rif</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:122px"></span>
-            <h4 class="title-sm">Dia 9 jun • <span class="tag mar">marrocos</span> chefchaouen → fes</h4>
+            <h4 class="title-sm">Dia 9 jun • <span class="tag mar">Marrocos</span> chefchaouen → fes</h4>
             <div class="muted">medina medieval e artesanato; tempo livre</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:180px"></span>
-            <h4 class="title-sm">Dia 10 jun • <span class="tag mar">marrocos</span> fes → rabat → marrakech</h4>
+            <h4 class="title-sm">Dia 10 jun • <span class="tag mar">Marrocos</span> fes → rabat → marrakech</h4>
             <div class="muted">torre hassan, kasbah dos oudayas, mausoléu mohamed v</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:238px"></span>
-            <h4 class="title-sm">Dia 11 jun • <span class="tag mar">marrocos</span> marrakech</h4>
+            <h4 class="title-sm">Dia 11 jun • <span class="tag mar">Marrocos</span> Marrakech</h4>
             <div class="muted">koutoubia (ext.), tumbas saaditas, palácio bahia, jardim majorelle, jemaa el‑fna</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:296px"></span>
-            <h4 class="title-sm">Dia 12 jun • voo para <span class="tag gre">grécia</span> atenas</h4>
+            <h4 class="title-sm">Dia 12 jun • <span class="tag gre">Grécia</span> voo para Atenas</h4>
             <div class="muted">chegada e tarde livre</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:354px"></span>
-            <h4 class="title-sm">Dia 13 jun • <span class="tag gre">grécia</span> atenas & cabo sounion</h4>
+            <h4 class="title-sm">Dia 13 jun • <span class="tag gre">Grécia</span> atenas & cabo sounion</h4>
             <div class="muted">acrópole, panorâmica, templo de poseidon ao entardecer</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:412px"></span>
-            <h4 class="title-sm">Dia 14 jun • <span class="tag gre">grécia</span> ferry piraeus → mykonos</h4>
+            <h4 class="title-sm">Dia 14 jun • <span class="tag gre">Grécia</span> ferry piraeus → mykonos</h4>
             <div class="muted">walking tour em chora</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:470px"></span>
-            <h4 class="title-sm">Dia 15 jun • <span class="tag gre">grécia</span> mykonos</h4>
+            <h4 class="title-sm">Dia 15 jun • <span class="tag gre">Grécia</span> mykonos</h4>
             <div class="muted">day use em beach club (nammos)</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:528px"></span>
-            <h4 class="title-sm">Dia 16 jun • <span class="tag gre">grécia</span> cruzeiro delos & rhenia</h4>
+            <h4 class="title-sm">Dia 16 jun • <span class="tag gre">Grécia</span> cruzeiro delos & rhenia</h4>
             <div class="muted">barco com almoço e bebidas</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:586px"></span>
-            <h4 class="title-sm">Dia 17 jun • <span class="tag gre">grécia</span> mykonos → santorini</h4>
+            <h4 class="title-sm">Dia 17 jun • <span class="tag gre">Grécia</span> mykonos → santorini</h4>
             <div class="muted">tour em oia ao pôr do sol + degustação</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:644px"></span>
-            <h4 class="title-sm">Dia 18 jun • <span class="tag gre">grécia</span> santorini</h4>
+            <h4 class="title-sm">Dia 18 jun • <span class="tag gre">Grécia</span> santorini</h4>
             <div class="muted">red cruise na caldeira: praias branca, preta e vermelha</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:702px"></span>
@@ -226,7 +206,7 @@
         </figure>
       </div>
       <div style="grid-column:span 5">
-        <p class="kicker">marrocos</p>
+        <p class="kicker">Marrocos</p>
         <h2 class="section-title">casablanca</h2>
         <p class="lede">Porta de entrada moderna com alma atlântica — da Mesquita Hassan II à elegante Anfa e à Corniche de Ain Diab.</p>
         <div class="card" style="margin-top:14px">
@@ -248,10 +228,12 @@
     </div>
   </section>
 
+  <hr class="divider mar">
+
   <section id="chefchaouen" class="container">
     <div class="grid">
       <div style="grid-column:span 5">
-        <p class="kicker">marrocos</p>
+        <p class="kicker">Marrocos</p>
         <h2 class="section-title">chefchaouen (a cidade azul)</h2>
         <p class="lede">Entre montanhas do Rif, ruelas azuis e portas fotogênicas definem o clima de contemplação e artesanato.</p>
         <div class="card" style="margin-top:14px"><div class="body">
@@ -271,6 +253,8 @@
     </div>
   </section>
 
+  <hr class="divider mar">
+
   <section id="fes" class="container">
     <div class="grid">
       <div class="card" style="grid-column:span 7">
@@ -280,7 +264,7 @@
         </figure>
       </div>
       <div style="grid-column:span 5">
-        <p class="kicker">marrocos</p>
+        <p class="kicker">Marrocos</p>
         <h2 class="section-title">fes (medina medieval)</h2>
         <p class="lede">Antiga capital e coração artesanal — madrasas, souks e o labirinto de vielas preservam séculos de história.</p>
         <div class="card" style="margin-top:14px"><div class="body">
@@ -294,10 +278,12 @@
     </div>
   </section>
 
+  <hr class="divider mar">
+
   <section id="rabat" class="container">
     <div class="grid">
       <div style="grid-column:span 5">
-        <p class="kicker">marrocos</p>
+        <p class="kicker">Marrocos</p>
         <h2 class="section-title">rabat (capital)</h2>
         <p class="lede">Equilíbrio entre o cívico e o histórico: a Torre Hassan, o Mausoléu de Mohammed V e a Kasbah dos Oudayas.</p>
         <div class="card" style="margin-top:14px"><div class="body">
@@ -317,6 +303,8 @@
     </div>
   </section>
 
+  <hr class="divider mar">
+
   <section id="marrakech" class="container">
     <div class="grid">
       <div class="card" style="grid-column:span 7">
@@ -326,7 +314,7 @@
         </figure>
       </div>
       <div style="grid-column:span 5">
-        <p class="kicker">marrocos</p>
+        <p class="kicker">Marrocos</p>
         <h2 class="section-title">marrakech (pérola do sul)</h2>
         <p class="lede">Mosaico de cores, aromas e arte — Koutoubia, Tumbas Saaditas, Palácio Bahia, Jardim Majorelle e a praça Jemaa el‑Fna.</p>
         <div class="card" style="margin-top:14px"><div class="body">
@@ -340,10 +328,12 @@
     </div>
   </section>
 
+  <hr class="divider mar">
+
   <section id="atenas" class="container">
     <div class="grid">
       <div style="grid-column:span 5">
-        <p class="kicker">grécia</p>
+        <p class="kicker">Grécia</p>
         <h2 class="section-title">atenas clássica</h2>
         <p class="lede">Acrópole, Partenon e o Erechtheion com as Cariátides; o Estádio Panathinaikó (o “Kalimármaro”) resgata os Jogos Olímpicos modernos.</p>
         <div class="card" style="margin-top:14px"><div class="body">
@@ -363,6 +353,8 @@
     </div>
   </section>
 
+  <hr class="divider gre">
+
   <section id="sounion" class="container">
     <div class="grid">
       <div class="card" style="grid-column:span 7">
@@ -372,7 +364,7 @@
         </figure>
       </div>
       <div style="grid-column:span 5">
-        <p class="kicker">grécia</p>
+        <p class="kicker">Grécia</p>
         <h2 class="section-title">cabo sounion</h2>
         <p class="lede">Rota litorânea por Glyfada, Vouliagmeni e Varkiza culmina no templo de Poseidon, cenário cênico para o entardecer.</p>
         <div class="card" style="margin-top:14px"><div class="body">
@@ -386,10 +378,12 @@
     </div>
   </section>
 
+  <hr class="divider gre">
+
   <section id="mykonos" class="container">
     <div class="grid">
       <div style="grid-column:span 5">
-        <p class="kicker">grécia</p>
+        <p class="kicker">Grécia</p>
         <h2 class="section-title">mykonos</h2>
         <p class="lede">Casinhas brancas, ruelas de Chora e os icônicos moinhos do séc. XVI; beach clubs completam o cenário mediterrâneo.</p>
         <div class="card" style="margin-top:14px"><div class="body">
@@ -409,6 +403,8 @@
     </div>
   </section>
 
+  <hr class="divider gre">
+
   <section id="delos" class="container">
     <div class="grid">
       <div class="card" style="grid-column:span 7">
@@ -418,7 +414,7 @@
         </figure>
       </div>
       <div style="grid-column:span 5">
-        <p class="kicker">grécia</p>
+        <p class="kicker">Grécia</p>
         <h2 class="section-title">delos & rhenia (cruzeiro)</h2>
         <p class="lede">Passeio de barco entre história e mar: Delos, berço mítico de Apolo e Ártemis, foi também um importante entreposto comercial.</p>
         <div class="card" style="margin-top:14px"><div class="body">
@@ -432,10 +428,12 @@
     </div>
   </section>
 
+  <hr class="divider gre">
+
   <section id="santorini" class="container">
     <div class="grid">
       <div style="grid-column:span 5">
-        <p class="kicker">grécia</p>
+        <p class="kicker">Grécia</p>
         <h2 class="section-title">santorini (oia & caldeira)</h2>
         <p class="lede">Cúpulas azuis, vinhos de terroir vulcânico (Assyrtiko) e navegação pela cratera com praias branca, preta e vermelha.</p>
         <div class="card" style="margin-top:14px"><div class="body">
