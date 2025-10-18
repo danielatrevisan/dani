@@ -78,8 +78,8 @@
       margin:40px 0;
       opacity:.9;
     }
-    hr.divider.mar{ border-top:1px solid rgba(192,110,82,0.45); }   /* marrocos */
-    hr.divider.gre{ border-top:1px solid rgba(46,77,167,0.45); }     /* grécia */
+    hr.divider.mar{ border-top:1px solid rgba(192,110,82,0.45); }   /* Marrocos */
+    hr.divider.gre{ border-top:1px solid rgba(46,77,167,0.45); }     /* Grécia */
 
     /* OVERRIDES TIMELINE (vertical country labels, separators, no dots) */
     .timeline{ position:relative; padding-left:72px; }
@@ -87,7 +87,8 @@
     .timeline .dot{ display:none; }
 
     .tl-item{ position:relative; margin:22px 0; padding-top:14px; }
-    .tl-item:not(:first-child){ border-top:1px solid #e6e2da; }
+  /* Keep default border between timeline days so both timeline separators and section dividers are shown. */
+  .tl-item:not(:first-child){ border-top:1px solid #e6e2da; }
 
     .country-vert{
       position:absolute; left:0; top:0;
@@ -117,98 +118,130 @@
   <!-- CAPA -->
   <header class="hero" id="capa">
     <div class="hero-inner container">
-      <div class="eyebrow">grupo dani • junho 2026 • 13 dias / 12 noites</div>
-      <h1 class="title">marrocos & grécia – catálogo da viagem</h1>
-      <p class="subtitle">roteiro premium com curiosidades históricas, destaques culturais e dicas úteis</p>
-      <div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-        <span class="pill"><span class="icon" aria-hidden="true"></span><strong>privado</strong> com guia em português</span>
-        <span class="pill"><span class="icon" aria-hidden="true"></span>hotéis 4★/5★</span>
-      </div>
+      <div class="eyebrow">Exploradores do Mundo • junho 2026 • 13 dias / 12 noites</div>
+      <h1 class="title">Marrocos & Grécia</h1>
+      <p class="subtitle">Roteiro PREMIUM</p>
     </div>
   </header>
 
-  <!-- NAV ANCORADA -->
-  <nav class="sticky" aria-label="Navegação de seções">
-    <div class="nav-inner container">
-      <a href="#timeline">linha do tempo</a>
-      <a href="#casablanca">casablanca</a>
-      <a href="#chefchaouen">chefchaouen</a>
-      <a href="#fes">fes</a>
-      <a href="#rabat">rabat</a>
-      <a href="#marrakech">marrakech</a>
-      <a href="#atenas">atenas</a>
-      <a href="#sounion">cabo sounion</a>
-      <a href="#mykonos">mykonos</a>
-      <a href="#delos">delos & rhenia</a>
-      <a href="#santorini">santorini</a>
-      <a href="#dicas">dicas & observações</a>
-      <a href="#contatos">contatos</a>
-    </div>
-  </nav>
 
   <!-- LINHA DO TEMPO -->
   <section id="timeline" class="container">
-    <p class="kicker">visão geral</p>
-    <h2 class="section-title">linha do tempo do roteiro</h2>
-    <p class="lede">Uma visão concisa das experiências previstas — do Atlântico marroquino ao azul cicládico.</p>
+<p class="lede" style="color:#5C4033; font-style:italic; line-height:1.8;">
+  “Uma viagem que une o perfume das especiarias marroquinas ao azul infinito do Mediterrâneo grego.<br><br>
+  Em treze dias, atravessaremos séculos de história, passando por desertos dourados, medinas labirínticas e vilas que parecem suspensas sobre o mar.<br><br>
+  Uma travessia entre mundos — do calor das tradições árabes à leveza da vida à beira do Egeu.”
+</p>
+    <h2 class="section-title">Roteiro</h2>
 
     <div class="card" style="margin-top:18px">
       <div class="body">
         <div class="timeline no-dots">
           <!-- Barras verticais com nome dos países (ajuste top/height conforme necessário) -->
-          <div class="country-vert mar" style="top:0;height:296px;">marrocos</div>
-          <div class="country-vert gre" style="top:296px;height:460px;">grécia</div>
+          <div class="country-vert mar" style="top:0;height:975px;">Marrocos</div>
+          <div class="country-vert gre" style="top:975px;height:1470px;">Grécia</div>
           <div class="tl-item"><span class="dot" style="top:6px"></span>
-            <h4 class="title-sm">Dia 7 jun • <span class="tag mar">marrocos</span> casablanca</h4>
-            <div class="muted">chegada, mesquita hassan ii, anfa e corniche ain diab</div>
+            <h4 class="title-sm">Dia 7 jun • <span class="tag mar">Marrocos</span> Casablanca</h4>
+            <div class="muted">Chegada no aeroporto de Casablanca, recepção pelo motorista. </br> Visitaremos a Mesquita
+                                Hassan II, a área residencial de Anfa, até chegarmos à costa de Ain Diab, uma área
+                                próspera da cidade onde você encontrará restaurantes, cafés e clubes famosos. </br>Checkin,
+                                jantar e pernoite no hotel.</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:64px"></span>
-            <h4 class="title-sm">Dia 8 jun • <span class="tag mar">marrocos</span> casablanca → chefchaouen</h4>
-            <div class="muted">cidade azul nas montanhas rif</div>
+            <h4 class="title-sm">Dia 8 jun • <span class="tag mar">Marrocos</span> Casablanca → Chefchaouen</h4>
+            <div class="muted">Café da manhã, check out do hotel e saída. </br> Visita à Mesquita Hassan II, à área residencial
+                                de Anfa e, em seguida, à Corniche de Ain Diab, um animado bairro à beira-mar com
+                                renomados restaurantes, cafés e clubes. </br>Após a visita partiremos para Chefchaouen. Ao
+                                chegar, faremos check-in no hotel. Jantar e pernoite no hotel.</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:122px"></span>
-            <h4 class="title-sm">Dia 9 jun • <span class="tag mar">marrocos</span> chefchaouen → fes</h4>
-            <div class="muted">medina medieval e artesanato; tempo livre</div>
+            <h4 class="title-sm">Dia 9 jun • <span class="tag mar">Marrocos</span> Chefchaouen → Fez</h4>
+            <div class="muted">Café da manhã, check out do hotel e saída para o passeio pela cidade. </br>Saída de
+                              Chefchouen as 14h com destino a Fez, a cidade foi a capital do reino antes de 1912 e
+                              manteve seu status de centro de artesanato do país. </br> Exploraremos a medina de Fez, a
+                              antiga cidade murada. Esse Património Mundial da UNESCO foi fundado no século IX e
+                              abriga a universidade mais antiga do mundo. Veremos outros locais importantes, como Madersa
+                              Bouinania, Attarine Medersa, Mesquita Al Qaraouiyine, Moulay Idriss Zaouia, Nejjarine
+                              Souk e o distrito hebraico de Mellah, na sequência.
+                              </br> Resto do dia livre, caminhando pelas ruelas estreitas do centro histórico em grupo, mas sem guia. 
+                              </br>Jantar e pernoite no hotel em Fez.</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:180px"></span>
-            <h4 class="title-sm">Dia 10 jun • <span class="tag mar">marrocos</span> fes → rabat → marrakech</h4>
-            <div class="muted">torre hassan, kasbah dos oudayas, mausoléu mohamed v</div>
+            <h4 class="title-sm">Dia 10 jun • <span class="tag mar">Marrocos</span> Fez → Rabat → Marrakech</h4>
+            <div class="muted">Café da manhã, check out do hotel e saída rumo a Rabat, capital do Marrocos. </br> City tour
+                              panorâmico incluindo a Torre Hassan, a Kasbah dos Oudayas e o Mausoléu de Mohamed
+                              V. Continuação para Marrakech. </br> Chegada, jantar e pernoite.</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:238px"></span>
-            <h4 class="title-sm">Dia 11 jun • <span class="tag mar">marrocos</span> marrakech</h4>
-            <div class="muted">koutoubia (ext.), tumbas saaditas, palácio bahia, jardim majorelle, jemaa el‑fna</div>
+            <h4 class="title-sm">Dia 11 jun • <span class="tag mar">Marrocos</span> Marrakech</h4>
+            <div class="muted">Café da manhã. Dia inteiro dedicado à visita de Marrakech, conhecida como a Pérola do
+                              Sul, fundada pelos Almorávidas no final do século XI. A visita inclui a Mesquita Koutoubia
+                              (externa), a Tumba Saadiana, o Palácio da Bahia e o Jardim Majorelle. </br> Passaremos o resto do dia explorando a mágica Praça Djemaa El Fna. 
+                              </br> Retorno ao hotel. Jantar e pernoite no hotel.</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:296px"></span>
-            <h4 class="title-sm">Dia 12 jun • voo para <span class="tag gre">grécia</span> atenas</h4>
-            <div class="muted">chegada e tarde livre</div>
+            <h4 class="title-sm">Dia 12 jun • <span class="tag gre">Grécia</span> Voo de Marrakech para Atenas</h4>
+            <div class="muted">Café da manhã no hotel e check-out. </br> Traslado para o aeroporto para embarque em seu
+                              voo com destino a Atenas. </br> Chegada, encontro com seu motorista e traslado ao seu hotel
+                              em Atenas. Restante do dia livre.</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:354px"></span>
-            <h4 class="title-sm">Dia 13 jun • <span class="tag gre">grécia</span> atenas & cabo sounion</h4>
-            <div class="muted">acrópole, panorâmica, templo de poseidon ao entardecer</div>
+            <h4 class="title-sm">Dia 13 jun • <span class="tag gre">Grécia</span> Atenas & Cabo Sounion</h4>
+            <div class="muted">Café da manhã. Saída para realizar a Visita à Cidade ½ Dia: Acrópolis + Panorâmica de
+                              Atenas. O Partenón, símbolo clássico da arquitetura, construído totalmente em mármore
+                              branco. O Partenón é o maior Templo erguido em honra à deusa Atena. Próximo ao
+                              Partenón se encontra o pequeno Templo de Erechthion com esculturas de preciosas
+                              donzelas sustentado o teto da varanda. </br> O tour panorâmico nos levará à Tumba do soldado
+                              desconhecido, custodiada por soldados vestidos com a tradicional vestimenta, o
+                              Parlamento e o Estádio Panathinaikon, onde se celebraram os primeiros Jogos Olímpicos
+                              da era moderna. Em seguida iremos até a Biblioteca, a Academia e à Universidade, três
+                              edifícios representativos da arquitetura do século XIX mesclada com a influência
+                              clássica. </br>Parada para almoço no Dionysos Zonar's (com reserva de mesa, almoço pago
+                              localmente). </br>A tarde, seguiremos para a costa de Atenas e seguiremos até o Cabo Sounion
+                              com um passeio maravilhoso ao longo da paisagem estrada costeira que oferece uma
+                              vista esplêndida do Golfo Sarônico, passando por algumas das mais belas partes de
+                              Atenas, subúrbios (Glyfada, Vouliagmeni, Varkiza). </br>À medida que nos aproximamos do
+                              Cabo Sounion, ergue-se como um penhasco íngreme do mar. No Cabo Sounio, onde
+                              visitaremos o Templo de Poseidon com uma das mais deslumbrantes vistas
+                              panorâmicas do mundo. </br>
+                              Retorno ao hotel. À noite, jantar folclórico típico (jantar e vinho incluídos).</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:412px"></span>
-            <h4 class="title-sm">Dia 14 jun • <span class="tag gre">grécia</span> ferry piraeus → mykonos</h4>
-            <div class="muted">walking tour em chora</div>
+            <h4 class="title-sm">Dia 14 jun • <span class="tag gre">Grécia</span> Ferry Piraeus (Atenas) → Mykonos</h4>
+            <div class="muted">Após o café da manhã, transfer para o porto de Piraeus e embarque em ferry rápido para
+                              Mykonos. </br>Chegada, transfer para o hotel e check in. </br> A tarde, saída para o Walking Tour em
+                              Mykonos Town. </br>Tempo livre para jantar. </br>Transfer de retorno ao hotel após 2h de jantar.</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:470px"></span>
-            <h4 class="title-sm">Dia 15 jun • <span class="tag gre">grécia</span> mykonos</h4>
-            <div class="muted">day use em beach club (nammos)</div>
+            <h4 class="title-sm">Dia 15 jun • <span class="tag gre">Grécia</span> Mykonos</h4>
+            <div class="muted">Café da manhã e Transfer para passar o dia em um dos Beach Clubs mais badalados
+                              de Mykonos, o Nammos.</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:528px"></span>
-            <h4 class="title-sm">Dia 16 jun • <span class="tag gre">grécia</span> cruzeiro delos & rhenia</h4>
-            <div class="muted">barco com almoço e bebidas</div>
+            <h4 class="title-sm">Dia 16 jun • <span class="tag gre">Grécia</span> Cruzeiro Delos & Rhenia</h4>
+            <div class="muted">Café da manhã e manhã livre. </br>Saída para passeio de barco sunset pelas praias de Delos
+                              e Rhenia, incluindo almoço e bebidas. </br>Retorno ao hotel no final do dia.</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:586px"></span>
-            <h4 class="title-sm">Dia 17 jun • <span class="tag gre">grécia</span> mykonos → santorini</h4>
-            <div class="muted">tour em oia ao pôr do sol + degustação</div>
+            <h4 class="title-sm">Dia 17 jun • <span class="tag gre">Grécia</span> Mykonos → Santorini</h4>
+            <div class="muted">Após o café da manhã, transfer para o porto de Mykonos e ferry rápido para Santorini.
+                              </br>Chegada, transfer para o hotel e check in. 
+                              </br>Saída para tour guiado em Oia ao entardecer, com degustação de vinhos. Tempo livre para jantar e após 2h, transfer de retorno para o
+                              hotel.</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:644px"></span>
-            <h4 class="title-sm">Dia 18 jun • <span class="tag gre">grécia</span> santorini</h4>
-            <div class="muted">red cruise na caldeira: praias branca, preta e vermelha</div>
+            <h4 class="title-sm">Dia 18 jun • <span class="tag gre">Grécia</span> Santorini</h4>
+            <div class="muted">Manhã livre.
+                             </br>A tarde, saída para passeio de veleiro na qual navegaremos pela cratera do
+                              vulcão, com paradas para nadar, incluindo nas águas termais do vulcão. Veremos a praia
+                              branca, a praia preta e a praia vermelha, além dos paredões de lava formados na última
+                              erupção do vulcão. 
+                              </br>Almoço a bordo e bebidas incluídas (água, suco, refrigerante, vinho e
+                              cerveja). </br>Retorno ao hotel.</div>
           </div>
           <div class="tl-item"><span class="dot" style="top:702px"></span>
-            <h4 class="title-sm">Dia 19 jun • retorno</h4>
-            <div class="muted">traslado ao aeroporto</div>
+            <h4 class="title-sm">Dia 19 jun • Retorno</h4>
+            <div class="muted">Traslado ao aeroporto</div>
           </div>
         </div>
       </div>
@@ -217,17 +250,17 @@
 
   <!-- SEÇÕES POR DESTINO (texto curto + curiosidades) -->
   
-  <section id="casablanca" class="container">
+  <section id="Casablanca" class="container">
     <div class="grid" style="grid-template-columns:repeat(12,1fr)">
       <div class="card" style="grid-column:span 7">
         <figure>
-          <img alt="Mesquita Hassan II em Casablanca" src="https://images.unsplash.com/photo-1555421689-3f034debb7d5?q=80&w=1600&auto=format&fit=crop" />
-          <figcaption>mesquita hassan ii e o atlântico</figcaption>
+          <img alt="Mesquita Hassan II em Casablanca" src="https://viagemeturismo.abril.com.br/wp-content/uploads/2016/10/154204740.jpeg?quality=70&strip=info&w=920&w=636" />
+          <figcaption>A Mesquita Hassan II foi construída parcialmente sobre o oceano — uma obra monumental erguida sobre as ondas.</figcaption>
         </figure>
       </div>
       <div style="grid-column:span 5">
-        <p class="kicker">marrocos</p>
-        <h2 class="section-title">casablanca</h2>
+        <p class="kicker">Marrocos</p>
+        <h2 class="section-title">Casablanca</h2>
         <p class="lede">Porta de entrada moderna com alma atlântica — da Mesquita Hassan II à elegante Anfa e à Corniche de Ain Diab.</p>
         <div class="card" style="margin-top:14px">
           <div class="body">
@@ -238,271 +271,423 @@
             </ul>
           </div>
         </div>
-        <div class="card" style="margin-top:14px">
-          <div class="body">
-            <strong>destaques</strong>
-            <ul class="list"><li>Visita à Hassan II • Passeio por Anfa • Pôr do sol na Corniche Ain Diab</li></ul>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <section id="chefchaouen" class="container">
+  <hr class="divider mar">
+
+  <section id="Chefchaouen" class="container">
     <div class="grid">
       <div style="grid-column:span 5">
-        <p class="kicker">marrocos</p>
-        <h2 class="section-title">chefchaouen (a cidade azul)</h2>
+        <p class="kicker">Marrocos</p>
+        <h2 class="section-title">Chefchaouen (a cidade azul)</h2>
         <p class="lede">Entre montanhas do Rif, ruelas azuis e portas fotogênicas definem o clima de contemplação e artesanato.</p>
         <div class="card" style="margin-top:14px"><div class="body">
           <strong>curiosidades</strong>
           <ul class="list">
             <li>A tradição do azul ganhou força no séc. XX e popularizou-se entre moradores e artesãos.</li>
-            <li>O ritmo é de vila: perfeito para caminhar, provar queijos e observar a luz nos becos.</li>
+            <li>O ritmo é de vila: perfeito para caminhar, provar queijos e observar e ver a luz mudar de tom nos becos azuis.</li>
           </ul>
         </div></div>
       </div>
       <div class="card" style="grid-column:span 7">
         <figure>
-          <img alt="Ruelas azuis de Chefchaouen" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop" />
-          <figcaption>ruelas azuis e portas coloridas</figcaption>
+          <img alt="Ruelas azuis de Chefchaouen" src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQ5rgJs2rWk_YbMUCK0Bpaeyfywgsy5BbcSrs4wX-8hRWrRfL7TxAdzKTMWU8_oj44dGrlOJSU_V9O7TGgpUmadHgbZBNter5Coe12Ugg" />
+          <figcaption>Dizem que o azul de Chefchaouen espanta os mosquitos — e também as más energias.</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <section id="fes" class="container">
+  <hr class="divider mar">
+
+  <section id="Fez" class="container">
     <div class="grid">
       <div class="card" style="grid-column:span 7">
         <figure>
-          <img alt="Vista aérea da medina de Fes" src="https://images.unsplash.com/photo-1598021204024-95b9ea76735c?q=80&w=1600&auto=format&fit=crop" />
-          <figcaption>medina de fes — património mundial</figcaption>
+          <img alt="Vista aérea da medina de Fez" src="https://res.cloudinary.com/ddjuftfy2/image/upload/f_webp,c_fill,q_auto/memphis/xlarge/428206206_Tanerries%20of%20Fez%20(2).jpg" />
+          <figcaption>Medina de Fez — patrimônio mundial. Passear pela medina é como viajar no tempo: ruas estreitas, sons de martelos, especiarias e couro no ar.</figcaption>
         </figure>
       </div>
       <div style="grid-column:span 5">
-        <p class="kicker">marrocos</p>
-        <h2 class="section-title">fes (medina medieval)</h2>
+        <p class="kicker">Marrocos</p>
+        <h2 class="section-title">Fez (medina medieval)</h2>
         <p class="lede">Antiga capital e coração artesanal — madrasas, souks e o labirinto de vielas preservam séculos de história.</p>
         <div class="card" style="margin-top:14px"><div class="body">
           <strong>curiosidades</strong>
           <ul class="list">
-            <li>A medina foi fundada no séc. IX; costuma-se dizer que Al‑Qarawiyyin é uma das universidades mais antigas em funcionamento.</li>
-            <li>Entre os marcos: Bou Inania, Attarine, Nejjarine e o bairro judaico Mellah.</li>
+            <li>Fundada no século IX, Fez conserva a alma do Marrocos ancestral: nas vielas da medina vive a Universidade Al-Qarawiyyin, em atividade há mais de mil anos.</li>
           </ul>
         </div></div>
       </div>
     </div>
   </section>
 
-  <section id="rabat" class="container">
+  <hr class="divider mar">
+
+  <section id="Rabat" class="container">
     <div class="grid">
       <div style="grid-column:span 5">
-        <p class="kicker">marrocos</p>
-        <h2 class="section-title">rabat (capital)</h2>
+        <p class="kicker">Marrocos</p>
+        <h2 class="section-title">Rabat (capital)</h2>
         <p class="lede">Equilíbrio entre o cívico e o histórico: a Torre Hassan, o Mausoléu de Mohammed V e a Kasbah dos Oudayas.</p>
         <div class="card" style="margin-top:14px"><div class="body">
           <strong>curiosidades</strong>
           <ul class="list">
-            <li>O conjunto da mesquita Hassan (séc. XII) permaneceu inacabado, deixando a torre como ícone.</li>
-            <li>A Kasbah oferece mirantes sobre o Bou Regreg e o Atlântico.</li>
+            <li>Iniciada no século XII, a mesquita Hassan jamais foi concluída — e sua torre tornou-se o grande ícone de Rabat.
+                Da Kasbah dos Oudayas, mirantes revelam o encontro do rio Bou Regreg com o Atlântico.</li>
           </ul>
         </div></div>
       </div>
       <div class="card" style="grid-column:span 7">
         <figure>
-          <img alt="Torre Hassan em Rabat" src="https://images.unsplash.com/photo-1542979910-0e3c71ab1a9a?q=80&w=1600&auto=format&fit=crop" />
-          <figcaption>torre hassan e esplanada</figcaption>
+          <img alt="Rabat é uma das quatro cidades imperiais do Marrocos e combina diplomacia moderna com tradições mouriscas." src="https://www.abraceomundo.com/wp-content/uploads/2025/06/rabat-marrocos.jpg" />
+          <figcaption>Rabat é uma das quatro cidades imperiais do Marrocos e combina diplomacia moderna com tradições mouriscas.</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <section id="marrakech" class="container">
+  <hr class="divider mar">
+
+  <section id="Marrakech" class="container">
     <div class="grid">
       <div class="card" style="grid-column:span 7">
         <figure>
-          <img alt="Jardim Majorelle em Marrakech" src="https://images.unsplash.com/photo-1565538420870-da0c0d6d95c5?q=80&w=1600&auto=format&fit=crop" />
-          <figcaption>jardim majorelle — azuis intensos e cactos</figcaption>
+          <img alt="Jardim Majorelle em Marrakech" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f2/0b/92/marrakech-new-city.jpg?w=600&h=-1&s=1" />
+          <figcaption>As cores terracota da cidade refletem o pôr do sol do deserto, tornando cada entardecer um espetáculo.</figcaption>
         </figure>
       </div>
       <div style="grid-column:span 5">
-        <p class="kicker">marrocos</p>
-        <h2 class="section-title">marrakech (pérola do sul)</h2>
+        <p class="kicker">Marrocos</p>
+        <h2 class="section-title">Marrakech (pérola do sul)</h2>
         <p class="lede">Mosaico de cores, aromas e arte — Koutoubia, Tumbas Saaditas, Palácio Bahia, Jardim Majorelle e a praça Jemaa el‑Fna.</p>
         <div class="card" style="margin-top:14px"><div class="body">
           <strong>curiosidades</strong>
           <ul class="list">
-            <li>O Jardim Majorelle foi restaurado por Yves Saint Laurent e Pierre Bergé a partir de 1980.</li>
-            <li>A Jemaa el‑Fna é patrimônio imaterial pela sua tradição oral e performática.</li>
+            <li>O Jardim Majorelle floresceu de novo nos anos 1980, quando Yves Saint Laurent e Pierre Bergé devolveram suas cores intensas ao deserto.</li>
+            <li>Na Jemaa el-Fna, a alma de Marrakech se manifesta em vozes, tambores e histórias que ecoam há séculos.</li></ul>
           </ul>
         </div></div>
       </div>
     </div>
   </section>
 
-  <section id="atenas" class="container">
+  <hr class="divider mar">
+
+  <section id="Atenas" class="container">
     <div class="grid">
       <div style="grid-column:span 5">
-        <p class="kicker">grécia</p>
-        <h2 class="section-title">atenas clássica</h2>
+        <p class="kicker">Grécia</p>
+        <h2 class="section-title">Atenas</h2>
         <p class="lede">Acrópole, Partenon e o Erechtheion com as Cariátides; o Estádio Panathinaikó (o “Kalimármaro”) resgata os Jogos Olímpicos modernos.</p>
         <div class="card" style="margin-top:14px"><div class="body">
           <strong>curiosidades</strong>
           <ul class="list">
-            <li>O Panathinaikon é inteiramente em mármore, reconstruído no séc. XIX.</li>
-            <li>A tríade Biblioteca–Academia–Universidade marca a Atenas neoclássica.</li>
+            <li>Inteiramente em mármore branco, o Panathinaikó foi reconstruído no século XIX para os primeiros Jogos Olímpicos modernos.</li>
+            <li>A tríade Biblioteca, Academia e Universidade simboliza a Atenas neoclássica e seu renascimento cultural.</li>
           </ul>
         </div></div>
       </div>
       <div class="card" style="grid-column:span 7">
         <figure>
-          <img alt="Partenon na Acrópole de Atenas" src="https://images.unsplash.com/photo-1632377083755-cb7b7747f8ab?q=80&w=1600&auto=format&fit=crop" />
-          <figcaption>partenon — símbolo clássico</figcaption>
+          <img alt="Partenon na Acrópole de Atenas" src="https://www.qualviagem.com.br/wp-content/uploads/2016/12/iStock-516329342.jpg" />
+          <figcaption>Diz-se que Atena venceu Poseidon em um desafio: ela ofereceu a oliveira à cidade, e os atenienses escolheram a sabedoria em vez do mar.</figcaption>
         </figure>
       </div>
     </div>
   </section>
+
+  <hr class="divider gre">
 
   <section id="sounion" class="container">
     <div class="grid">
       <div class="card" style="grid-column:span 7">
         <figure>
-          <img alt="Templo de Poseidon em Cabo Sounion" src="https://images.unsplash.com/photo-1569330416272-82145e3b1a29?q=80&w=1600&auto=format&fit=crop" />
-          <figcaption>templo de poseidon — penhasco sobre o egeu</figcaption>
+          <img alt="Templo de Poseidon em Cabo Sounion" src="https://cdn.contexttravel.com/image/upload/w_1500,q_60/v1686795225/blog/Crete%20Silo/Q2%20%E2%80%93%20Crete%20Blog%202%2C%20Cape%20Sounion/14.jpg" />
+          <figcaption>A lenda conta que o rei Egeu se lançou dessas falésias ao mar, pensando que seu filho Teseu havia morrido — daí o nome Mar Egeu.</figcaption>
         </figure>
       </div>
       <div style="grid-column:span 5">
-        <p class="kicker">grécia</p>
-        <h2 class="section-title">cabo sounion</h2>
+        <p class="kicker">Grécia</p>
+        <h2 class="section-title">Cabo Sounion</h2>
         <p class="lede">Rota litorânea por Glyfada, Vouliagmeni e Varkiza culmina no templo de Poseidon, cenário cênico para o entardecer.</p>
         <div class="card" style="margin-top:14px"><div class="body">
           <strong>curiosidades</strong>
           <ul class="list">
-            <li>Vista ampla do golfo Sarônico; em dias claros, é possível avistar diversas ilhas.</li>
-            <li>O templo atual data do séc. V a.C., em estilo dórico.</li>
+            <li>O cabo revela um dos horizontes mais belos da Grécia: o mar aberto, as ilhas ao longe e o vento constante.</li>
+            <li>Erguido no século V a.C., o templo de Poseidon mantém viva a harmonia entre pedra, céu e oceano.</li>
           </ul>
         </div></div>
       </div>
     </div>
   </section>
 
-  <section id="mykonos" class="container">
+  <hr class="divider gre">
+
+  <section id="Mykonos" class="container">
     <div class="grid">
       <div style="grid-column:span 5">
-        <p class="kicker">grécia</p>
-        <h2 class="section-title">mykonos</h2>
+        <p class="kicker">Grécia</p>
+        <h2 class="section-title">Mykonos</h2>
         <p class="lede">Casinhas brancas, ruelas de Chora e os icônicos moinhos do séc. XVI; beach clubs completam o cenário mediterrâneo.</p>
         <div class="card" style="margin-top:14px"><div class="body">
           <strong>curiosidades</strong>
           <ul class="list">
-            <li>Os moinhos aproveitavam ventos constantes para moer grãos.</li>
-            <li>Arquitetura cicládica prioriza fachadas brancas para refletir a luz e o calor.</li>
+            <li>Movidos pelos ventos do Egeu, os moinhos de Mykonos giram como há séculos — símbolo da força e da leveza da ilha.</li>
+            <li>O branco das casas, marca da arquitetura cicládica, devolve o sol ao céu e transforma a luz em paisagem.</li>
           </ul>
         </div></div>
       </div>
       <div class="card" style="grid-column:span 7">
         <figure>
-          <img alt="Ruelas brancas de Mykonos" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1600&auto=format&fit=crop" />
-          <figcaption>chora — estética cicládica</figcaption>
+          <img alt="Ruelas brancas de Mykonos" src="https://memorial.tur.br/wp-content/uploads/2024/07/Mykonos-Grecia-Johnny-Africa-unsplash-edited-2048x1152.jpg" />
+          <figcaption>Chora, o vilarejo principal, é um labirinto branco criado para confundir piratas.</figcaption>
+        </figure>
+        <figure>
+          <img alt="Beach club" src="https://661c8763cd.clvaw-cdnwnd.com/340e045617281c7b0680f4d74bc6822f/200052581-c2f75c2f76/Gemini_Generated_Image_xuny5oxuny5oxuny.webp?ph=661c8763cd" />
+          <figcaption>Beach club</figcaption>
         </figure>
       </div>
     </div>
   </section>
+
+  <hr class="divider gre">
 
   <section id="delos" class="container">
     <div class="grid">
       <div class="card" style="grid-column:span 7">
         <figure>
-          <img alt="Sítio arqueológico de Delos" src="https://images.unsplash.com/photo-1508704019882-f9cf40e4759f?q=80&w=1600&auto=format&fit=crop" />
-          <figcaption>delos — ruínas helenísticas e mitologia</figcaption>
+          <img alt="Sítio arqueológico de Delos" src="https://checkyeti.imgix.net/images/prod/products/21248/Greece-Sailing-hero-1-5?auto=format,compress&fit=crop&w=1024&q=45&dpr=2" />
+          <figcaption>Delos é o berço mítico de Apolo e Ártemis — o sol e a lua, nascidos lado a lado.</figcaption>
         </figure>
       </div>
       <div style="grid-column:span 5">
-        <p class="kicker">grécia</p>
-        <h2 class="section-title">delos & rhenia (cruzeiro)</h2>
+        <p class="kicker">Grécia</p>
+        <h2 class="section-title">Delos & Rhenia (cruzeiro)</h2>
         <p class="lede">Passeio de barco entre história e mar: Delos, berço mítico de Apolo e Ártemis, foi também um importante entreposto comercial.</p>
         <div class="card" style="margin-top:14px"><div class="body">
           <strong>curiosidades</strong>
           <ul class="list">
-            <li>O sítio preserva casas com mosaicos, colunatas e ágoras helenísticas.</li>
-            <li>Paradas para banho nas águas translúcidas completam a experiência.</li>
+            <li>Em Delos, ruínas e mosaicos contam histórias de um mundo consagrado a Apolo.</li>
+            <li>Em Rhenia, o silêncio e as águas cristalinas revelam o lado sereno da Grécia eterna.</li>
           </ul>
         </div></div>
       </div>
     </div>
   </section>
 
-  <section id="santorini" class="container">
+  <hr class="divider gre">
+
+  <section id="Santorini" class="container">
     <div class="grid">
       <div style="grid-column:span 5">
-        <p class="kicker">grécia</p>
-        <h2 class="section-title">santorini (oia & caldeira)</h2>
+        <p class="kicker">Grécia</p>
+        <h2 class="section-title">Santorini (oia & caldeira)</h2>
         <p class="lede">Cúpulas azuis, vinhos de terroir vulcânico (Assyrtiko) e navegação pela cratera com praias branca, preta e vermelha.</p>
         <div class="card" style="margin-top:14px"><div class="body">
           <strong>curiosidades</strong>
           <ul class="list">
-            <li>A paisagem é marcada pela grande erupção minoica, que moldou falésias e solo basáltico.</li>
-            <li>As águas termais próximas ao vulcão apresentam coloração ferruginosa.</li>
+            <li>A grande erupção minoica, há mais de três mil anos, esculpiu as falésias negras e o solo basáltico que definem Santorini.</li>
+            <li>Próximas ao vulcão, as águas termais de coloração ferruginosa revelam a energia ainda viva sob o mar Egeu.</li>
           </ul>
         </div></div>
       </div>
       <div class="card" style="grid-column:span 7">
         <figure>
           <img alt="Pôr do sol em Oia, Santorini" src="https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1600&auto=format&fit=crop" />
-          <figcaption>oia — pôr do sol sobre a caldeira</figcaption>
+          <figcaption>Dizem que foi aqui que os deuses misturaram o céu ao mar, e esqueceram de separar as cores.</figcaption>
+        </figure>
+        <figure>
+          <img alt="Telhados azuis de Santorini" src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/data/ports/santorini-greece/overview/santorini-greece-oia-white-blue.jpg?$1920x800$" />
+          <figcaption>Casas brancas e cúpulas azuis parecem flutuar sobre o mar, como se o tempo ali respirasse mais devagar.</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- DICAS & OBSERVAÇÕES -->
-  <section id="dicas" class="container">
-    <p class="kicker">útil</p>
-    <h2 class="section-title">dicas rápidas & observações</h2>
-    <div class="grid">
-      <div class="card" style="grid-column:span 6"><div class="body">
-        <strong>logística</strong>
+<!-- ================= INFORMAÇÕES DO PACOTE (DUAS LINHAS, TRÊS COLUNAS) ================= -->
+<section id="pacote" class="container">
+
+  <style>
+    #pacote .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 32px;
+      margin-top: 20px;
+    }
+
+    /* 3 colunas por linha no desktop */
+    #pacote .card {
+      grid-column: span 4;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 6px 24px rgba(0,0,0,.06);
+      overflow: hidden;
+    }
+
+    #pacote .card .body {
+      padding: 24px 26px 28px;
+    }
+
+    #pacote .section-title {
+      font-size: 22px;
+      line-height: 1.25;
+      margin: 0 0 .8rem 0;
+      color: #0b2e63;
+      font-weight: 700;
+    }
+
+    #pacote .list {
+      margin: .4rem 0 0 0;
+      padding-left: 1.25rem;
+    }
+
+    #pacote .list li {
+      margin: .4rem 0;
+    }
+
+    /* tablet: 2 colunas */
+    @media (max-width: 1024px) {
+      #pacote .card { grid-column: span 6; }
+    }
+
+    /* mobile: 1 coluna */
+    @media (max-width: 640px) {
+      #pacote .card { grid-column: span 12; }
+    }
+
+ #pacote .hospedagens .list {
+  padding-left: 0.9rem;   /* reduz o recuo padrão */
+  margin-top: 0.3rem;     /* aproxima do título */
+  line-height: 1.35;      /* linha mais compacta, sem ficar apertada demais */
+}
+
+#pacote .hospedagens .list li {
+  font-size: 0.95rem;     /* fonte levemente menor */
+  margin: 0.25rem 0;      /* menos espaço entre linhas */
+}
+
+
+  </style>
+  
+
+  <div class="grid">
+
+    <!-- O QUE INCLUI – MARROCOS -->
+    <div class="card">
+      <div class="body">
+        <h2 class="section-title">O que inclui — Marrocos</h2>
         <ul class="list">
-          <li>Check-in padrão às 14h; check‑out às 12h. <!-- Edite se necessário --></li>
-          <li>Traslados, ferries e passeios conforme roteiro.</li>
-          <li>Hidratação e proteção solar essenciais em passeios externos.</li>
+          <li>Recepção e assistência no Aeroporto Mohammed V.</li>
+          <li>5 noites em hotéis selecionados em meia pensão (café e jantar).</li>
+          <li>Transporte com motorista durante todo o tour.</li>
+          <li>Todas as visitas mencionadas no programa.</li>
+          <li>Guia nativo falando português.</li>
+          <li>Entradas para os monumentos indicados.</li>
+          <li>1 garrafa pequena de água por dia e por pessoa no ônibus.</li>
+          <li>Taxas e encargos de serviços.</li>
+          <li>Gorjetas.</li>
         </ul>
-      </div></div>
-      <div class="card" style="grid-column:span 6"><div class="body">
-        <strong>etiqueta & entradas</strong>
-        <ul class="list">
-          <li>Mesquitas/templos: ombros e joelhos cobertos quando aplicável.</li>
-          <li>Gorjetas: previstas no Marrocos; na Grécia, conforme serviço.</li>
-          <li>Ingressos de monumentos indicados nas visitas guiadas.</li>
-        </ul>
-      </div></div>
+      </div>
     </div>
-  </section>
+
+    <!-- O QUE INCLUI – GRÉCIA -->
+    <div class="card">
+      <div class="body">
+        <h2 class="section-title">O que inclui — Grécia</h2>
+        <ul class="list">
+          <li>Recepção e assistência no Aeroporto Internacional de Atenas.</li>
+          <li>Traslados com assistente em português ou espanhol.</li>
+          <li>2 noites em Atenas, 3 em Mykonos e 2 em Santorini (café incluído).</li>
+          <li>Atenas: city tour + Acrópole/Ágora/Stoa (entradas incluídas).</li>
+          <li>Cabo Sounion com guia oficial (entradas incluídas).</li>
+          <li>Jantar folclórico típico em Atenas (jantar e vinho incluído).</li>
+          <li>Walking tour em Mykonos Town (guia em espanhol).</li>
+          <li>Cruzeiro Delos &amp; Rhenia com almoço e bebidas (sem entradas em Delos e sem toalhas).</li>
+          <li>Traslados de ida e volta para Nammos (ingresso à parte).</li>
+          <li>Tour ao entardecer em Oia com degustação de vinhos.</li>
+          <li>Red Cruise (5h) em Santorini — manhã ou pôr do sol, com comidas e bebidas a bordo.</li>
+          <li>Barco rápido PIREO↔MYKONOS e MYKONOS↔SANTORINI (classe econômica numerada).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- O QUE NÃO INCLUI -->
+    <div class="card">
+      <div class="body">
+        <h2 class="section-title">O que não inclui</h2>
+        <ul class="list">
+          <li>Passagens de voos internacionais.</li>
+          <li>Seguro viagem (obrigatório).</li>
+          <li>Gorjetas na Grécia.</li>
+          <li>Maleiteiros no aeroporto e nos hotéis.</li>
+          <li>Bebidas durante as refeições, exceto onde informado como incluídas.</li>
+          <li>Despesas pessoais e opcionais.</li>
+          <li>Qualquer serviço não mencionado no programa.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DICAS ÚTEIS -->
+    <div class="card">
+      <div class="body">
+        <h2 class="section-title">Dicas úteis</h2>
+        <ul class="list">
+          <li>Temperaturas em junho: Marrocos 24–38 °C | Grécia 26–33 °C.</li>
+          <li>Índice UV alto — protetor solar, chapéu e óculos são indispensáveis.</li>
+          <li>Roupas leves (algodão/linho) e calçados confortáveis.</li>
+          <li>Em mesquitas e templos: ombros e joelhos cobertos; leve um lenço.</li>
+          <li>Noites com vento em ilhas — leve uma jaqueta leve.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOSPEDAGENS PREVISTAS -->
+
+    <div class="card hospedagens">
+      <div class="body">
+        <h2 class="section-title">Hospedagens previstas</h2>
+        <ul class="list">
+          <li>Casablanca: Sofitel Tour Blanche (5*)</li>
+          <li>Chefchaouen: Taj Chefchaouen (5*)</li>
+          <li>Fez: Palais Medina &amp; Spa (5*)</li>
+          <li>Marrakech: Mövenpick Marrakech (5*)</li>
+          <li>Atenas: Royal Olympic (5*)</li>
+          <li>Mykonos: Porto Mykonos (4* sup)</li>
+          <li>Santorini: Orama Hotel (5*)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DOCUMENTOS -->
+    <div class="card">
+      <div class="body">
+        <h2 class="section-title">Documentos &amp; saúde</h2>
+        <ul class="list">
+          <li>Passaporte válido por pelo menos 6 meses após o retorno.</li>
+          <li>Seguro viagem obrigatório (médico, bagagem, cancelamento).</li>
+          <li>Certificado Internacional de Vacinação contra Febre Amarela.</li>
+          <li>Medicamentos pessoais e receitas médicas, se necessário.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ================= /INFORMAÇÕES DO PACOTE ================= -->
 
   <!-- CONTATOS -->
   <footer id="contatos">
     <div class="container">
       <div class="grid">
         <div style="grid-column:span 7">
-          <h2 class="section-title" style="margin-top:0">contatos & personalização</h2>
-          <p>Insira aqui logomarca, telefones e QR code para o grupo. <!-- Substitua por seus dados --></p>
-        </div>
-        <div class="card" style="grid-column:span 5">
-          <div class="body">
-            <strong>hospedagens previstas</strong>
-            <ul class="list">
-              <li>Casablanca — Sofitel Tour Blanche</li>
-              <li>Chefchaouen — Taj Chefchaouen</li>
-              <li>Fes — Palais Medina & Spa</li>
-              <li>Marrakech — Mövenpick Marrakech</li>
-              <li>Atenas — Royal Olympic</li>
-              <li>Mykonos — Porto Mykonos (4★ sup)</li>
-              <li>Santorini — Orama Hotel</li>
-            </ul>
-          </div>
+          <h2 class="section-title" style="margin-top:0">Contato</h2>
+          <p>Daniela: (63) 98403-5274 <!-- Substitua por seus dados --></p>
         </div>
       </div>
-      <p class="muted" style="margin-top:16px">© 2026 Grupo Dani — Este catálogo é editável. Substitua textos e imagens conforme desejar.</p>
+      <p class="muted" style="margin-top:16px">© 2026 Exploradores do mundo!</p>
     </div>
   </footer>
 </body>
