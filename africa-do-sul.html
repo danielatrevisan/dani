@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>África do Sul · Agosto 2027 — Dani & Friends</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --sand:#EFE6D2;
+    --sand-card:#FBF6EA;
+    --charcoal:#221B15;
+    --charcoal-soft:#3A3128;
+    --rust:#A8481F;
+    --rust-dark:#7E3417;
+    --wine:#551830;
+    --wine-light:#7A2A46;
+    --bush:#2C4033;
+    --bush-light:#3E5A48;
+    --gold:#C79A3E;
+    --line: rgba(34,27,21,0.15);
+    --line-light: rgba(255,255,255,0.22);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--sand);
+    color:var(--charcoal);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    line-height:1.08;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  section{padding:96px 0;}
+  @media (max-width:720px){
+    section{padding:64px 0;}
+    .wrap{padding:0 20px;}
+  }
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky;top:0;z-index:40;
+    background:rgba(239,230,210,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:16px;padding-bottom:16px;
+  }
+  .nav-brand{
+    font-family:'Fraunces',serif;font-size:1.05rem;font-weight:500;
+  }
+  .nav-brand span{color:var(--rust);}
+  .nav-cta{
+    font-size:0.85rem;font-weight:600;
+    background:var(--charcoal);color:var(--sand);
+    padding:10px 20px;border-radius:2px;
+    text-decoration:none;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--rust);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    background:linear-gradient(180deg,#2A1A12 0%, var(--rust-dark) 55%, var(--rust) 100%);
+    color:var(--sand);
+    padding:0;
+    overflow:hidden;
+  }
+  .hero-inner{
+    position:relative;z-index:2;
+    padding:120px 28px 60px;
+    max-width:1080px;margin:0 auto;
+  }
+  .hero-eyebrow{
+    font-size:0.9rem;color:var(--gold);font-weight:500;
+    margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem,5.4vw,4.2rem);
+    max-width:14ch;
+    opacity:0; transform:translateY(14px);
+    animation:riseIn .9s ease forwards;
+  }
+  .hero .sub{
+    margin-top:26px;max-width:46ch;
+    font-size:1.08rem;color:rgba(239,230,210,0.88);
+    opacity:0; transform:translateY(14px);
+    animation:riseIn .9s ease .18s forwards;
+  }
+  .hero-meta{
+    margin-top:34px;display:flex;gap:28px;flex-wrap:wrap;
+    font-size:0.92rem;color:var(--sand);
+    opacity:0; transform:translateY(14px);
+    animation:riseIn .9s ease .32s forwards;
+  }
+  .hero-meta b{font-weight:600;color:var(--gold);}
+  .hero-ctas{
+    margin-top:42px;display:flex;gap:16px;flex-wrap:wrap;
+    opacity:0; transform:translateY(14px);
+    animation:riseIn .9s ease .46s forwards;
+  }
+  .btn{
+    display:inline-block;padding:14px 26px;font-size:0.92rem;font-weight:600;
+    text-decoration:none;border-radius:2px;
+  }
+  .btn-solid{background:var(--gold);color:var(--charcoal);}
+  .btn-solid:hover{background:#dcb35d;}
+  .btn-ghost{border:1px solid var(--line-light);color:var(--sand);}
+  .btn-ghost:hover{border-color:var(--sand);}
+
+  @keyframes riseIn{to{opacity:1;transform:translateY(0);}}
+
+  .hero-scene{width:100%;height:auto;display:block;margin-top:20px;}
+
+  /* ---------- STATS ---------- */
+  /* ---------- ROUTE MAP ---------- */
+  .route{background:var(--sand-card);border-bottom:1px solid var(--line);padding:64px 0;}
+  .route .section-head{margin-bottom:36px;}
+  .route-svg{width:100%;height:auto;}
+  .route-stop text{font-family:'Fraunces',serif;}
+
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .stat{padding:34px 24px;border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  .stat b{
+    display:block;font-family:'Fraunces',serif;font-size:2.1rem;color:var(--rust);
+    margin-bottom:4px;
+  }
+  .stat span{font-size:0.86rem;color:var(--charcoal-soft);}
+  @media (max-width:720px){
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .stat{border-bottom:1px solid var(--line);}
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section-head{max-width:56ch;margin-bottom:52px;}
+  .section-head .kicker{font-size:0.86rem;color:var(--rust);font-weight:600;margin-bottom:10px;}
+  .light .section-head .kicker{color:var(--gold);}
+  .section-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem);}
+  .section-head p{margin-top:16px;color:var(--charcoal-soft);font-size:1rem;}
+  .light .section-head p{color:rgba(239,230,210,0.82);}
+
+  /* ---------- ITINERARY ---------- */
+  .itinerary{background:var(--sand);}
+  .timeline{position:relative;padding-left:0;}
+  .day{
+    display:grid;grid-template-columns:120px 1fr;gap:28px;
+    position:relative;padding:30px 0;border-top:1px solid var(--line);
+  }
+  .day:first-child{border-top:1px solid var(--line);}
+  .day-date{
+    font-family:'Fraunces',serif;font-size:1.3rem;color:var(--rust);
+    padding-top:2px;
+  }
+  .day-date small{display:block;font-family:'Inter',sans-serif;font-size:0.72rem;
+    color:var(--charcoal-soft);font-weight:600;margin-top:4px;letter-spacing:.02em;}
+  .day-city{font-size:0.82rem;font-weight:600;color:var(--wine);margin-bottom:8px;}
+  .day-body h3{font-size:1.15rem;font-weight:500;margin-bottom:8px;}
+  .day-body p{color:var(--charcoal-soft);font-size:0.97rem;}
+  .day-tag{
+    display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:600;
+    color:var(--rust);border:1px solid var(--rust);padding:4px 10px;border-radius:2px;
+  }
+  @media (max-width:640px){
+    .day{grid-template-columns:1fr;gap:10px;}
+    .day-date{display:flex;align-items:baseline;gap:10px;}
+    .day-date small{margin-top:0;}
+  }
+
+  /* ---------- INCLUDED / NOT INCLUDED ---------- */
+  .incl{background:var(--bush);color:var(--sand);}
+  .incl-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;}
+  @media (max-width:800px){.incl-grid{grid-template-columns:1fr;gap:40px;}}
+  .incl h3{font-size:1.1rem;color:var(--gold);margin-bottom:20px;font-weight:500;font-family:'Fraunces',serif;}
+  .incl ul{list-style:none;margin:0;padding:0;}
+  .incl li{
+    display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line-light);
+    font-size:0.95rem;
+  }
+  .incl li:last-child{border-bottom:1px solid var(--line-light);}
+  .mark{flex:none;width:20px;height:20px;margin-top:2px;}
+  .not-incl li{color:rgba(239,230,210,0.72);}
+
+  /* ---------- OPTIONALS ---------- */
+  .optionals{background:var(--sand);}
+  .opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;}
+  @media (max-width:760px){.opt-grid{grid-template-columns:1fr;}}
+  .opt-card{border-top:2px solid var(--rust);padding-top:22px;}
+  .opt-card .price{
+    font-family:'Fraunces',serif;font-size:1.6rem;color:var(--rust);margin-bottom:10px;
+  }
+  .opt-card h3{font-size:1.15rem;font-weight:500;margin-bottom:10px;}
+  .opt-card p{color:var(--charcoal-soft);font-size:0.95rem;}
+  .opt-card .note{margin-top:14px;font-size:0.84rem;color:var(--wine);font-weight:600;}
+
+  /* ---------- ACCOMMODATIONS ---------- */
+  .stays{background:var(--sand-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .stay-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+  .stay{padding:30px 26px;border-right:1px solid var(--line);}
+  .stay:last-child{border-right:none;}
+  .stay .loc{font-size:0.78rem;font-weight:600;color:var(--rust);margin-bottom:10px;text-transform:none;}
+  .stay .name{font-family:'Fraunces',serif;font-size:1.2rem;}
+  .stay .nights{margin-top:10px;font-size:0.85rem;color:var(--charcoal-soft);}
+  @media (max-width:800px){
+    .stay-grid{grid-template-columns:repeat(2,1fr);}
+    .stay{border-bottom:1px solid var(--line);}
+  }
+
+  /* ---------- PRICING ---------- */
+  .pricing{background:var(--wine);color:var(--sand);}
+  .price-table{width:100%;border-collapse:collapse;margin-top:10px;}
+  .price-table th,.price-table td{
+    text-align:left;padding:16px 18px;border-top:1px solid var(--line-light);
+    font-size:0.95rem;
+  }
+  .price-table thead th{
+    font-family:'Fraunces',serif;font-weight:500;font-size:1rem;color:var(--gold);
+    border-top:none;
+  }
+  .price-table td.value{font-family:'Fraunces',serif;font-size:1.2rem;}
+  .price-foot{margin-top:28px;font-size:0.86rem;color:rgba(239,230,210,0.75);max-width:60ch;}
+
+  /* ---------- NOTES ---------- */
+  .notes{background:var(--sand);}
+  .notes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 48px;}
+  @media (max-width:720px){.notes-grid{grid-template-columns:1fr;}}
+  .note-item{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--line);}
+  .note-item svg{flex:none;margin-top:2px;}
+  .note-item p{font-size:0.93rem;color:var(--charcoal-soft);}
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:var(--charcoal);color:var(--sand);
+  }
+  .contact-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;}
+  .contact h2{font-size:clamp(1.8rem,3.6vw,2.6rem);max-width:16ch;}
+  .contact .agent{font-size:0.95rem;color:rgba(239,230,210,0.75);margin-top:22px;}
+  .contact .agent b{color:var(--gold);font-weight:600;}
+  .contact-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+
+  footer{
+    background:var(--charcoal);color:rgba(239,230,210,0.55);
+    border-top:1px solid var(--line-light);
+    font-size:0.8rem;padding:26px 0;
+  }
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="nav-brand">África do Sul <span>· Ago 2027</span></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Roteiro privativo · Grupo Exploradores do Mundo - parte VI</div>
+    <h1>Dias de experiências entre a savana, os vinhedos e o Atlântico</h1>
+    <p class="sub">Joanesburgo, o Greater Kruger, Stellenbosch e a Cidade do Cabo — Experiência para ficar guardada para sempre!</p>
+    <div class="hero-meta">
+      <span><b>25/08 a 08/09/2027</b> (da saída à chegada)</span>
+      <span><b>4 destinos</b> · 1 viagem só</span>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="#roteiro">Ver o roteiro dia a dia</a>
+      <a class="btn btn-ghost" href="#investimento">Ver valores</a>
+    </div>
+
+    <svg class="hero-scene" viewBox="0 0 1000 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="1000" height="260" fill="none"/>
+      <!-- sun -->
+      <circle cx="820" cy="70" r="46" fill="#C79A3E" opacity="0.55"/>
+      <!-- table mountain -->
+      <path d="M120 200 L260 90 L300 90 L420 200 Z" fill="#3A2415" opacity="0.85"/>
+      <path d="M260 90 L300 90 L318 108 L246 108 Z" fill="#2A1A12"/>
+      <!-- rolling hills -->
+      <path d="M0 210 Q160 170 340 210 T700 210 T1000 195 L1000 260 L0 260 Z" fill="#7E3417" opacity="0.55"/>
+      <!-- vineyard rows -->
+      <g stroke="#C79A3E" stroke-width="2" opacity="0.35">
+        <line x1="60" y1="240" x2="180" y2="216"/>
+        <line x1="90" y1="248" x2="210" y2="224"/>
+        <line x1="120" y1="255" x2="240" y2="231"/>
+      </g>
+      <!-- acacia tree -->
+      <g transform="translate(50,160)" opacity="0.9">
+        <line x1="0" y1="0" x2="0" y2="55" stroke="#2A1A12" stroke-width="5"/>
+        <ellipse cx="0" cy="-12" rx="46" ry="11" fill="#2A1A12"/>
+      </g>
+
+      <!-- Big Five, in silhouette along the horizon -->
+      <g fill="#2A1A12" opacity="0.92">
+
+        <!-- elephant -->
+        <g transform="translate(430,205)">
+          <path d="M-2 -34 C -20 -34 -30 -22 -28 -10 C -34 -8 -36 2 -30 6 L -30 16 L -24 16 L -24 8 L 4 8 C 14 8 22 2 24 -8 C 30 -6 34 2 30 8 L 28 16 L 22 16 L 22 10 C 6 12 -8 8 -14 0 C -22 -2 -24 -14 -18 -22 C -14 -30 -8 -34 -2 -34 Z" />
+          <path d="M-28 -10 C -34 -6 -38 2 -34 12 C -32 16 -28 14 -27 8 C -30 2 -30 -6 -26 -12 Z"/>
+        </g>
+
+        <!-- rhino -->
+        <g transform="translate(520,212)">
+          <path d="M-22 4 C -24 -6 -16 -14 -4 -14 L 10 -14 C 16 -20 24 -18 22 -12 L 18 -8 C 22 -6 24 0 20 4 L 20 12 L 14 12 L 14 6 L -10 6 L -10 12 L -16 12 L -16 6 C -20 6 -22 6 -22 4 Z"/>
+        </g>
+
+        <!-- buffalo -->
+        <g transform="translate(610,210)">
+          <path d="M-20 6 C -22 -6 -12 -14 0 -12 C 4 -20 14 -20 16 -13 C 20 -15 24 -12 20 -8 C 24 -6 22 0 16 -4 L 16 10 L 10 10 L 10 2 L -12 2 L -12 10 L -18 10 Z"/>
+        </g>
+
+        <!-- lion -->
+        <g transform="translate(700,214)">
+          <circle cx="4" cy="-16" r="11" opacity="0.85"/>
+          <path d="M-14 4 C -16 -6 -8 -12 4 -12 C 12 -12 18 -6 16 4 L 16 10 L 11 10 L 11 5 L -9 5 L -9 10 L -14 10 Z"/>
+          <path d="M14 2 C 20 4 22 10 18 12 C 15 13 12 10 12 6 Z"/>
+        </g>
+
+        <!-- leopard -->
+        <g transform="translate(780,216)">
+          <path d="M-16 4 C -17 -4 -10 -9 0 -9 C 8 -9 14 -4 13 4 L 13 9 L 9 9 L 9 5 L -11 5 L -11 9 L -16 9 Z"/>
+          <path d="M12 -2 C 18 -3 22 2 20 6 C 18 9 14 7 13 3 Z"/>
+        </g>
+      </g>
+
+      <!-- birds -->
+      <g stroke="#EFE6D2" stroke-width="2.5" fill="none" opacity="0.6">
+        <path d="M700 50 q8 -10 16 0 q8 -10 16 0"/>
+        <path d="M745 68 q7 -8 14 0 q7 -8 14 0"/>
+      </g>
+    </svg>
+  </div>
+</header>
+
+<section class="route">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">O caminho</div>
+      <h2>Uma linha só, de norte a sul do país</h2>
+      <p>Quatro paradas, três voos internos — do bush do Greater Kruger ao Atlântico da Cidade do Cabo.</p>
+    </div>
+
+    <svg class="route-svg" viewBox="0 0 1000 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rota da viagem: Joanesburgo, Greater Kruger, Stellenbosch e Cape Town">
+      <line x1="70" y1="130" x2="930" y2="130" stroke="#A8481F" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.55"/>
+
+      <g class="route-stop">
+        <circle cx="90" cy="130" r="8" fill="#A8481F"/>
+        <text x="90" y="90" text-anchor="middle" font-size="18" fill="#221B15">Joanesburgo</text>
+        <text x="90" y="160" text-anchor="middle" font-size="12" fill="#3A3128" font-family="Inter,sans-serif">26–28/08</text>
+      </g>
+
+      <g class="route-stop">
+        <circle cx="400" cy="130" r="8" fill="#A8481F"/>
+        <text x="400" y="90" text-anchor="middle" font-size="18" fill="#221B15">Greater Kruger</text>
+        <text x="400" y="160" text-anchor="middle" font-size="12" fill="#3A3128" font-family="Inter,sans-serif">28–30/08</text>
+      </g>
+
+      <g class="route-stop">
+        <circle cx="650" cy="130" r="8" fill="#A8481F"/>
+        <text x="650" y="90" text-anchor="middle" font-size="18" fill="#221B15">Stellenbosch</text>
+        <text x="650" y="160" text-anchor="middle" font-size="12" fill="#3A3128" font-family="Inter,sans-serif">30/08–02/09</text>
+      </g>
+
+      <g class="route-stop">
+        <circle cx="910" cy="130" r="8" fill="#A8481F"/>
+        <text x="910" y="90" text-anchor="middle" font-size="18" fill="#221B15">Cape Town</text>
+        <text x="910" y="160" text-anchor="middle" font-size="12" fill="#3A3128" font-family="Inter,sans-serif">02–06/09</text>
+      </g>
+
+      <!-- small plane markers over the two internal flights -->
+      <g transform="translate(245,124) rotate(90)" fill="#C79A3E">
+        <path d="M0 -7 L4 4 L0 2 L-4 4 Z"/>
+      </g>
+      <g transform="translate(525,124) rotate(90)" fill="#C79A3E">
+        <path d="M0 -7 L4 4 L0 2 L-4 4 Z"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><b>4</b><span>cidades e reservas — Joanesburgo, Greater Kruger, Stellenbosch e Cape Town</span></div>
+  <div class="stat"><b>6</b><span>safáris de veículo 4x4 no Greater Kruger, além do bush walk</span></div>
+  <div class="stat"><b>2</b><span>dias inteiros nas vinícolas de Stellenbosch e Franschhoek</span></div>
+</div>
+
+<section class="itinerary" id="roteiro">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Dia a dia</div>
+      <h2>O roteiro, do embarque ao voo de volta</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="day">
+        <div class="day-date">25/08<small>Saída do BR</small></div>
+      </div>
+
+    <div class="timeline">
+      <div class="day">
+        <div class="day-date">26/08<small>Dia 1  </br> Chegada</small></div>
+        <div class="day-body">
+          <div class="day-city">Joanesburgo</div>
+          <h3>Desembarque e descanso</h3>
+          <p>Chegada ao Aeroporto Internacional de Joanesburgo, encontro com o motorista e transfer privativo em português até o hotel. Check-in e restante do dia livre.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">27/08<small>Dia 2</small></div>
+        <div class="day-body">
+          <div class="day-city">Joanesburgo</div>
+          <h3>City tour, Museu do Apartheid e Soweto</h3>
+          <p>Café da manhã e saída com motorista para o city tour de meio dia: Museu do Apartheid, o bairro de Soweto e a casa de Nelson Mandela.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">28/08<small>Dia 3</small></div>
+        <div class="day-body">
+          <div class="day-city">Joanesburgo → Hoedspruit → Greater Kruger</div>
+          <h3>Voo para o Greater Kruger e primeiro safári</h3>
+          <p>Transfer privativo ao aeroporto de JNB para o voo até Hoedspruit (não incluído). Chegada e traslado ao Shiduli Safari Lodge, na Karongwe Game Reserve — parte do Greater Kruger, com Big Five (leão, elefante, rinoceronte, búfalo e leopardo) em liberdade. Almoço, safári (ou piscina, se preferir) e jantar.</p>
+          <span class="day-tag">Bush walk disponível — hóspedes acima de 16 anos</span>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">29/08<small>Dia 4</small></div>
+        <div class="day-body">
+          <div class="day-city">Game Reserve</div>
+          <h3>Dia inteiro de safári</h3>
+          <p>Café da manhã, safári, almoço, novo safári (ou piscina) e jantar.</p>
+          <span class="day-tag">Bush walk disponível — hóspedes acima de 16 anos</span>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">30/08<small>Dia 5</small></div>
+        <div class="day-body">
+          <div class="day-city">Game Reserve</div>
+          <h3>Dia inteiro de safári</h3>
+          <p>Café da manhã, safári, almoço, novo safári (ou piscina) e jantar.</p>
+          <span class="day-tag">Bush walk disponível — hóspedes acima de 16 anos</span>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">31/08<small>Dia 6</small></div>
+        <div class="day-body">
+          <div class="day-city">Game Reserve → Stellenbosch</div>
+          <h3>Último safári e voo para a Cidade do Cabo</h3>
+          <p>Café da manhã e safári matinal. Check-out e transfer privativo ao aeroporto de Hoedspruit para o voo a Cape Town (não incluído). Chegada ao Aeroporto Internacional Nelson Mandela, encontro com o motorista e traslado ao hotel em Stellenbosch.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">01/09<small>Dia 7</small></div>
+        <div class="day-body">
+          <div class="day-city">Stellenbosch</div>
+          <h3>Vinícolas de Stellenbosch e Franschhoek</h3>
+          <p>Guia privativo encontra o grupo no hotel para um dia inteiro pelas cidades de Stellenbosch e Franschhoek, com paradas em vinícolas, degustação de vinho e as histórias do vinho sul-africano.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">02/09<small>Dia 8</small></div>
+        <div class="day-body">
+          <div class="day-city">Stellenbosch</div>
+          <h3>Mais uma vinícola, com degustação</h3>
+          <p>Café da manhã no hotel e novo dia inteiro com o guia privativo, visitando mais uma vinícola (a Cellar), com degustação de 2 vinhos.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">03/09<small>Dia 9</small></div>
+        <div class="day-body">
+          <div class="day-city">Stellenbosch → Cape Town</div>
+          <h3>Transfer para a Cidade do Cabo</h3>
+          <p>Café da manhã, check-out e transfer privativo até o hotel em Cape Town.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">04/09<small>Dia 10</small></div>
+        <div class="day-body">
+          <div class="day-city">Cape Town</div>
+          <h3>Manhã livre e subida à Table Mountain</h3>
+          <p>Manhã livre no hotel. À tarde, passeio panorâmico de meio dia pelos principais pontos da cidade, com subida à Table Mountain — entrada regular do teleférico já incluída.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">05/09<small>Dia 11</small></div>
+        <div class="day-body">
+          <div class="day-city">Cape Town</div>
+          <h3>Cape Peninsula, Cape Point e os pinguins de Boulders Beach</h3>
+          <p>Dia inteiro pela rota costeira, passando pela Chapman's Peak até o Cape Point, com subida ao topo pelo funicular. Após o almoço (não incluído), o passeio segue até a Boulders Beach para ver os pinguins africanos.</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">06/09<small>Dia 12</small></div>
+        <div class="day-body">
+          <div class="day-city">Cape Town</div>
+          <h3>Dia livre — ou passeios opcionais</h3>
+          <p>Dia livre (ainda em análise do que pode ser feito). Para quem quiser, há dois passeios opcionais no destino: mergulho com tubarões e um jantar com menu de degustação da gastronomia africana (veja os preços mais abaixo).</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-date">07/09<small>Retorno</small></div>
+        <div class="day-body">
+          <div class="day-city">Cape Town</div>
+          <h3>Check-out e voo de volta</h3>
+          <p>Café da manhã, check-out e transfer privativo em português até o Aeroporto Internacional de Cape Town para o voo de retorno (por conta dos passageiros).</p>
+        </div>
+
+        <div class="day">
+        <div class="day-date">08/09<small>Chegada no Brasil</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="incl">
+  <div class="wrap">
+    <div class="section-head light">
+      <div class="kicker">Transparência antes de tudo</div>
+      <h2>O que está incluso — e o que não está</h2>
+    </div>
+    <div class="incl-grid">
+      <div>
+        <h3>Incluso no pacote</h3>
+        <ul>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Traslado privativo do Aeroporto O.R. Tambo até o hotel em Joanesburgo.</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> 2 noites em Joanesburgo com café da manhã</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> 3 noites no Shiduli Park com café da manhã, almoço e jantar (sem bebidas)</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> 3 noites em Stellenbosch com café da manhã</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> 4 noites em Cape Town com café da manhã</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> City tour de meio dia em Joanesburgo (Museu do Apartheid + Soweto + casa de Mandela), guia em português</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Traslado privativo do hotel em Joanesburgo até o aeroporto</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Traslado regular do Aeroporto de Hoedspruit ao lodge no Greater Kruger, motorista em inglês</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> 2 safáris por dia no Shiduli Park, em veículo 4x4</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Bush walk (horário combinado diretamente no lodge)</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Traslado regular do lodge ao Aeroporto de Hoedspruit, motorista em inglês</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Traslado privativo do Aeroporto de Cape Town até o hotel em Stellenbosch</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> 2 dias inteiros de vinícolas em Stellenbosch e Franschhoek, com degustação de vinho e chocolate, guia em português</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Traslado privativo do hotel em Stellenbosch ao hotel em Cape Town</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> City tour de meio dia em Cape Town, com subida à Table Mountain</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Dia inteiro pela Península do Cabo, Chapman's Peak, Cabo da Boa Esperança e Boulders Beach</li>
+          <li><svg class="mark" viewBox="0 0 20 20"><path d="M3 10.5 L8 15 L17 5" stroke="#C79A3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Traslado privativo do hotel em Cape Town ao aeroporto</li>
+        </ul>
+      </div>
+      <div class="not-incl">
+        <h3>Não incluso</h3>
+        <ul>
+          <li>Passagem aérea internacional</li>
+          <li>Seguro de viagem (altamente recomendável)</li>
+          <li>Alimentos e bebidas não mencionados como inclusos</li>
+          <li>Passeios opcionais</li>
+        </ul>
+        <p style="margin-top:24px;font-size:0.85rem;color:rgba(239,230,210,0.6);">O que não está explícito e detalhado como incluso no preço da viagem, não está incluso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="optionals">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">No dia livre em Cape Town</div>
+      <h2>Dois passeios opcionais</h2>      
+    </div>
+    <div class="opt-grid">
+      <div class="opt-card">
+        <div class="price">US$ 370 <span style="font-size:0.9rem;color:var(--charcoal-soft);font-family:'Inter',sans-serif;">/ pessoa</span></div>
+        <h3>Mergulho em gaiola com tubarões</h3>
+        <p>Busca no hotel e transporte até a White Shark View, em Kleinbaai. Café da manhã continental, palestra de biólogos marinhos e cerca de 3 horas no mar. A gaiola acomoda 6 pessoas por vez, com rodízio para mergulhar até duas vezes — não é preciso licença de mergulho. Equipamento completo incluso, além de bebidas e um lanche a bordo. Ao voltar, chá, sopa e torradas.</p>
+      </div>
+      <div class="opt-card">
+        <div class="price">US$ 80 <span style="font-size:0.9rem;color:var(--charcoal-soft);font-family:'Inter',sans-serif;">/ pessoa</span></div>
+        <h3>Jantar no Gold Restaurant</h3>
+        <p>Menu de degustação típico da gastronomia africana, em um ambiente aconchegante, com música e uma "Drumming Experience" ao vivo. Inclui reserva de mesa e o jantar — bebidas por conta do passageiro.</p>
+        <div class="note">Início às 18:30</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stays">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Onde o grupo fica</div>
+      <h2>Hospedagem em cada destino</h2>
+    </div>
+    <div class="stay-grid">
+      <div class="stay">
+        <div class="loc">Joanesburgo</div>
+        <div class="name">NH Sandton</div>
+        <div class="nights">2 noites · café da manhã</div>
+      </div>
+      <div class="stay">
+        <div class="loc">Greater Kruger</div>
+        <div class="name">Shiduli Safari Lodge</div>
+        <div class="nights">3 noites · pensão completa, sem bebidas</div>
+      </div>
+      <div class="stay">
+        <div class="loc">Stellenbosch</div>
+        <div class="name">Spier Hotel</div>
+        <div class="nights">3 noites · café da manhã</div>
+      </div>
+      <div class="stay">
+        <div class="loc">Cape Town</div>
+        <div class="name">Southern Sun Waterfront</div>
+        <div class="nights">4 noites · café da manhã</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="investimento">
+  <div class="wrap">
+    <div class="section-head light">
+      <div class="kicker">Investimento</div>
+      <h2>Valores por pessoa, em quarto duplo</h2>
+    </div>
+    <table class="price-table">
+      <thead>
+       <th>Valor por pessoa</th></tr>
+      </thead>
+      <tbody>
+        <td class="value">US$ XXXX</td></tr>
+      </tbody>
+    </table>
+    <p class="price-foot">Valores sujeitos ao câmbio do dia do fechamento. Nada está reservado até o momento — apenas cotado; disponibilidade e valores podem mudar sem aviso prévio. Só a compra com confirmação de reserva garante os valores ofertados, e qualquer pagamento é aceito somente após a reserva 100% confirmada e o contrato assinado.</p>
+  </div>
+</section>
+
+<section class="notes">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Antes de reservar</div>
+      <h2>Pontos de atenção</h2>
+    </div>
+    <div class="notes-grid">
+      <div class="note-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8481F" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="1"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+        <p>Passaporte com no mínimo 6 meses de validade a partir do retorno, e com folhas em branco disponíveis.</p>
+      </div>
+      <div class="note-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8481F" stroke-width="1.8"><path d="M12 21c-4-4-7-7.5-7-11a7 7 0 0 1 14 0c0 3.5-3 7-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+        <p>Carteira Internacional de Vacinação contra a Febre Amarela, com QR Code, emitida pelo ConectSUS no GOV.BR.</p>
+      </div>
+      <div class="note-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8481F" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <p>Check-in nos hotéis às 14h e check-out às 12h.</p>
+      </div>
+      <div class="note-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8481F" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg>
+        <p>Este roteiro é em formato privativo. Nenhum trecho é compartilhado com outros grupos.</p>
+      </div>
+      <div class="note-item">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8481F" stroke-width="1.8"><path d="M12 2v20M2 12h20"/></svg>
+        <p>Seguro de viagem não incluso, mas altamente recomendável.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <span>Daniela: (63) 98403-5274
+</span>
+    <span>© 2026 Exploradores do mundo - parte VI</span>
+  </div>
+</footer>
+
+</body>
+</html>
