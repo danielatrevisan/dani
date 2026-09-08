@@ -134,12 +134,11 @@
   .route .section-head{margin-bottom:36px;}
   .route-svg{width:100%;height:auto;}
   .route-stop text{font-family:'Fraunces',serif;}
-
   .stats{
-    display:grid;grid-template-columns:repeat(4,1fr);
+    display:grid;grid-template-columns:repeat(3,1fr);
     border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   }
-  .stat{padding:34px 24px;border-right:1px solid var(--line);}
+  .stat{padding:34px 24px;border-right:1px solid var(--line);text-align:center;}
   .stat:last-child{border-right:none;}
   .stat b{
     display:block;font-family:'Fraunces',serif;font-size:2.1rem;color:var(--rust);
@@ -147,8 +146,9 @@
   }
   .stat span{font-size:0.86rem;color:var(--charcoal-soft);}
   @media (max-width:720px){
-    .stats{grid-template-columns:repeat(2,1fr);}
-    .stat{border-bottom:1px solid var(--line);}
+    .stats{grid-template-columns:1fr;}
+    .stat{border-right:none;border-bottom:1px solid var(--line);}
+    .stat:last-child{border-bottom:none;}
   }
 
   /* ---------- SECTION HEADERS ---------- */
